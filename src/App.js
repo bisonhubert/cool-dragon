@@ -1,13 +1,17 @@
 import React from 'react';
-import dragon_1 from './images/cool-dragon-2.gif';
 import './App.css';
+
+import Leaderboard from './components/leaderboard/Leaderboard';
+
+// import icon from './images/cool-dragon-2.gif';
+// import entries from './entries/master-entries.csv'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>omg cool dragon</h1>
-        <img src={dragon_1} className="App-logo" alt="logo" />
+        <h1>Leaderboard</h1>
+        <Leaderboard />
       </header>
     </div>
   );
