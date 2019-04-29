@@ -82,28 +82,28 @@ const homieEntries = [
     rank: '1',
     entry_doc_href: 'https://docs.google.com/document/d/1o4VyvQL6kxCi7bRJuRDOWIargWkL_ca1R0AQWfpcJ_Q/edit?usp=sharing'
   },
-  { player: 'suzan',
-    score: '19',
+  { player: 'bison',
+    score: '23',
     rank: '2',
+    entry_doc_href: 'https://docs.google.com/document/d/17sy3lUjmRPJLCgbgtpyvZtH3UufCy0omlG7gLSrcLxQ/edit?usp=sharing'
+  },
+  { player: 'will',
+    score: '20',
+    rank: '3',
+    entry_doc_href: 'https://docs.google.com/document/d/1fohq8mrvrNlm9YClZZ4TsrhIuXuxoXIib8wXti93yEg/edit?usp=sharing'
+  },
+  { player: 'suzan',
+    score: '20',
+    rank: '4',
     entry_doc_href: 'https://docs.google.com/document/d/19n6hjBemxU_1cLHje5k0_rFn60XKgqHveGchw60DRz8/edit?usp=sharing'
   },
   { player: 'tomas',
     score: '17',
-    rank: '3',
+    rank: '5',
     entry_doc_href: 'https://docs.google.com/document/d/1PWvSkO45iQ9prvyg5oGs8TLqE2qGN31fSg1sZUQbGI0/edit?usp=sharing'
   },
-  { player: 'bison',
-    score: '17',
-    rank: '3',
-    entry_doc_href: 'https://docs.google.com/document/d/17sy3lUjmRPJLCgbgtpyvZtH3UufCy0omlG7gLSrcLxQ/edit?usp=sharing'
-  },
-  { player: 'will',
-    score: '14',
-    rank: '5',
-    entry_doc_href: 'https://docs.google.com/document/d/1fohq8mrvrNlm9YClZZ4TsrhIuXuxoXIib8wXti93yEg/edit?usp=sharing'
-  },
   { player: 'ana',
-    score: '12',
+    score: '11',
     rank: '6',
     entry_doc_href: 'https://docs.google.com/document/d/13ilc0g9FydWbgVLgz-jrgDk4Rxca6-bxFw4gfV2Mhyk/edit?usp=sharing'
   },
