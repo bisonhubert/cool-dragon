@@ -23,7 +23,7 @@ function App() {
         </article>
         <article className="w-100p">
           <h4>Who kills the Night King?</h4>
-          <h5>dunno yet</h5>
+          <h5>Arya</h5>
         </article>
         <article className="w-100p">
           <h4>Who holds the Iron Throne at the end?</h4>
