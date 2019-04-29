@@ -7,11 +7,7 @@ function Leaderboard(props) {
 
   return (
     <div className="Leaderboard">
-      <header>
-        <table>
-          {entryComponents}
-        </table>
-      </header>
+      {entryComponents}
     </div>
   );
 }

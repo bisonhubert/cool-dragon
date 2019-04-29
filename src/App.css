@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.w-100p {
+  width: 100%;
+}
+
+.Leaderboard {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.Entry .col {
+  width: 25%;
+  display: inline-block;
+}
+
+.Entry a {
+  color: white;
+}
