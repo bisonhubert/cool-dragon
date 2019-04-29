@@ -1,4 +1,19 @@
 const bravaEntries = [
+  { player: 'zac',
+    score: '21',
+    rank: '1',
+    entry_doc_href: 'https://docs.google.com/document/d/1zc9PYviOgtMDveB_tA-flVgithZWQalBXTn_EnnovEA/edit?usp=sharing'
+  },
+  { player: 'min',
+    score: '12',
+    rank: '1',
+    entry_doc_href: 'https://docs.google.com/document/d/1boi9ySSbVhudy493YOF5ppB92016Wn00dPtAG6_Ku24/edit?usp=sharing'
+  },
+  { player: 'kayla',
+    score: '-3',
+    rank: '1',
+    entry_doc_href: 'https://docs.google.com/document/d/1HgNUJJI1_HAtzqZvhJmYJ6NlXe0NZK5FLcIuSS5gqMA/edit?usp=sharing'
+  },
   { player: 'aggie',
     score: '0',
     rank: '1',
@@ -39,11 +54,6 @@ const bravaEntries = [
     rank: '1',
     entry_doc_href: 'https://docs.google.com/document/d/1GaE0oI3vJzkHtkR9BNFmDJ4wHxFOM9KGuWG7AKFpIU4/edit?usp=sharing'
   },
-  { player: 'kayla',
-    score: '0',
-    rank: '1',
-    entry_doc_href: 'https://docs.google.com/document/d/1HgNUJJI1_HAtzqZvhJmYJ6NlXe0NZK5FLcIuSS5gqMA/edit?usp=sharing'
-  },
   { player: 'meg #1',
     score: '0',
     rank: '1',
@@ -64,16 +74,6 @@ const bravaEntries = [
     rank: '1',
     entry_doc_href: 'https://docs.google.com/document/d/1n1f9RVgUvHnOD6KZ1FEWiIjDc9eKOkci37_0AWMBlwk/edit?usp=sharing'
   },
-  { player: 'min',
-    score: '0',
-    rank: '1',
-    entry_doc_href: 'https://docs.google.com/document/d/1boi9ySSbVhudy493YOF5ppB92016Wn00dPtAG6_Ku24/edit?usp=sharing'
-  },
-  { player: 'zac',
-    score: '0',
-    rank: '1',
-    entry_doc_href: 'https://docs.google.com/document/d/1zc9PYviOgtMDveB_tA-flVgithZWQalBXTn_EnnovEA/edit?usp=sharing'
-     }
 ]
 
 const homieEntries = [
@@ -84,32 +84,32 @@ const homieEntries = [
   },
   { player: 'bison',
     score: '23',
-    rank: '1',
+    rank: '2',
     entry_doc_href: 'https://docs.google.com/document/d/17sy3lUjmRPJLCgbgtpyvZtH3UufCy0omlG7gLSrcLxQ/edit?usp=sharing'
   },
   { player: 'suzan',
     score: '19',
-    rank: '1',
+    rank: '3',
     entry_doc_href: 'https://docs.google.com/document/d/19n6hjBemxU_1cLHje5k0_rFn60XKgqHveGchw60DRz8/edit?usp=sharing'
   },
   { player: 'tomas',
     score: '17',
-    rank: '1',
+    rank: '4',
     entry_doc_href: 'https://docs.google.com/document/d/1PWvSkO45iQ9prvyg5oGs8TLqE2qGN31fSg1sZUQbGI0/edit?usp=sharing'
   },
   { player: 'will',
     score: '14',
-    rank: '1',
+    rank: '5',
     entry_doc_href: 'https://docs.google.com/document/d/1fohq8mrvrNlm9YClZZ4TsrhIuXuxoXIib8wXti93yEg/edit?usp=sharing'
   },
   { player: 'ana',
     score: '12',
-    rank: '1',
+    rank: '6',
     entry_doc_href: 'https://docs.google.com/document/d/13ilc0g9FydWbgVLgz-jrgDk4Rxca6-bxFw4gfV2Mhyk/edit?usp=sharing'
   },
   { player: 'keally',
     score: '4',
-    rank: '1',
+    rank: '7',
     entry_doc_href: 'https://docs.google.com/document/d/1HT9rW-B3lIYeZg46_60uHe9AkW03I3RIAnkbkrk-cIU/edit?usp=sharing'
   },
 ]
