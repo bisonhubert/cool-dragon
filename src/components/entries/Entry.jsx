@@ -17,7 +17,7 @@ function Entry(props) {
       <article class="col">
         <a href={props.entry.entry_doc_href}
              target="_blank"
-             rel="noopener"><h4>Entry Doc</h4></a>
+             rel="noopener noreferrer"><h4>Entry Doc</h4></a>
       </article>
     </div>
   );
