@@ -1,3 +1,5 @@
+import * as constants from './constants.js'
+
 const bravaEntries = [
   { player: 'justin',
     score: '35',
@@ -114,4 +116,72 @@ const homieEntries = [
   },
 ]
 
-export {bravaEntries, homieEntries};
+const masterEntries = [
+  {
+    episode: 8,
+    entry: {
+      alive: [
+        constants.ALYS,
+        constants.ARYA,
+        constants.BRAN,
+        constants.BRONN,
+        constants.BRIENNE,
+        constants.CERSEI,
+        constants.DROGON,
+        constants.ELLARIA,
+        constants.DAARIO,
+        constants.DAENERYS,
+        constants.DAVOS,
+        constants.EURON,
+        constants.GENDRY,
+        constants.GHOST,
+        constants.GILLY,
+        constants.GREY_WORM,
+        constants.HARRY,
+        constants.HOT_PIE,
+        constants.HOUND,
+        constants.JAMIE,
+        constants.JAQEN,
+        constants.JON_SNOW,
+        constants.MEERA,
+        constants.MISSANDEI,
+        constants.MOUNTAIN,
+        constants.PODRICK,
+        constants.QYBURN,
+        constants.RHAEGAL,
+        constants.ROBIN,
+        constants.SAM,
+        constants.SAM_JR,
+        constants.SANSA,
+        constants.TORMUND,
+        constants.TYRION,
+        constants.VARYS,
+        constants.WOLKAN,
+        constants.YARA,
+        constants.YOHN,
+      ],
+      dead: [
+        constants.BERIC,
+        constants.EDD,
+        constants.JORAH,
+        constants.LYANNA,
+        constants.MELISANDRE,
+        constants.NIGHT_KING,
+        constants.QHONO,
+        constants.THEON,
+        constants.VISERION
+      ],
+      whiteWalker: [
+        constants.EDD,
+        constants.LYANNA,
+        constants.QHONO
+      ],
+      bonus1: constants.BONUS_1,
+      bonus2: constants.BONUS_2,
+    }
+  },
+]
+
+const playerEntries = bravaEntries.concat(homieEntries)
+
+export {bravaEntries, homieEntries, masterEntries, playerEntries};
