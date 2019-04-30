@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 
+import { bravaEntries, homieEntries } from './components/entries/entryData';
 import Leaderboard from './components/leaderboard/Leaderboard';
 
-import { bravaEntries, homieEntries } from './components/entries/entryData';
+import nightKingKiller from './images/arya-night-king-2.gif'
+
 // import icon from './images/cool-dragon-2.gif';
-// import entries from './entries/master-entries.csv'
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         </article>
         <article className="w-100p">
           <h4>Who kills the Night King?</h4>
-          <h5>Arya</h5>
+          <img src={nightKingKiller} />
         </article>
         <article className="w-100p">
           <h4>Who holds the Iron Throne at the end?</h4>
