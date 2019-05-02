@@ -1,15 +1,6 @@
 import * as constants from '../../helpers/constants.js';
 
-// update entry structure to
-// {
-//    player: ,
-//    leaderboard: ,
-//    doc: ,
-//    alive: ,
-//    dead: ,
-//    whiteWalker: ,
-//    bonus: []
-// }
+// TODO (Bison): flatten entry structure
 
 const bravaEntries = [
   {
