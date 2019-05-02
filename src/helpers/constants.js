@@ -50,7 +50,7 @@ export const YOHN = 'Yohn Royce'
 
 // Bonus Questions
 export const BONUS_1 = 'bonus1'
-export const BONUS_1_ANSWER = ARYA
+export const BONUS_1_ANSWER = ['Arya', ARYA]
 export const BONUS_2 = 'bonus2'
 export const BONUS_2_ANSWER = undefined
 

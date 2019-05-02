@@ -1,9 +1,15 @@
 // Constants
 // ________________________________________________
-const ARYA = 'Arya'
-const DROGON = 'Drogon'
-const EDD = 'Edd'
-const POD = 'Podrick'
+const ARYA = 'Arya',
+      BRONN = 'Bronn',
+      DROGON = 'Drogon',
+      EDD = 'Edd',
+      GILLY = 'Gilly',
+      MISSANDEI = 'Missandei',
+      POD = 'Podrick',
+      RHAEGAL = 'Rhaegal',
+      TORMUND = 'Tormund',
+      VARYS = 'Varys'
 
 
 
@@ -47,6 +53,12 @@ export const drogonPodDupAlive = {
 
 export const podAlive = {
   alive: [POD],
+  dead: [],
+  whiteWalker: []
+}
+
+export const aliveLongList = {
+  alive: [ARYA, BRONN, DROGON, EDD, GILLY, MISSANDEI, POD, RHAEGAL, TORMUND, VARYS],
   dead: [],
   whiteWalker: []
 }
@@ -101,6 +113,12 @@ export const podDead = {
 export const eddPodDead = {
   alive: [],
   dead: [EDD, POD],
+  whiteWalker: []
+}
+
+export const deadLongList = {
+  alive: [],
+  dead: [ARYA, BRONN, DROGON, EDD, GILLY, MISSANDEI, POD, RHAEGAL, TORMUND, VARYS],
   whiteWalker: []
 }
 
