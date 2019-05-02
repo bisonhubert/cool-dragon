@@ -49,8 +49,10 @@ export const YOHN = 'Yohn Royce'
 
 
 // Bonus Questions
-export const BONUS_1 = ARYA
-export const BONUS_2 = undefined
+export const BONUS_1 = 'bonus1'
+export const BONUS_1_ANSWER = ARYA
+export const BONUS_2 = 'bonus2'
+export const BONUS_2_ANSWER = undefined
 
 
 // Leaderboard Types
@@ -58,5 +60,7 @@ export const BRAVA = 'brava'
 export const HOMIES = 'homies'
 
 
-// Episode Info
-export const EPISODE_LIST = [3, 4, 5, 6]
+// Scoring
+export const ALIVE = 'alive'
+export const DEAD = 'dead'
+export const WHITE_WALKER = 'whiteWalker'
