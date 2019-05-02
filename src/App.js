@@ -3,7 +3,7 @@ import './App.css';
 
 // import { bravaEntries, homieEntries } from './components/entries/entryData';
 import { bravaEntries, homieEntries, masterEntries, playerEntries } from './components/entries/entryData';
-import { BRAVA, HOMIES } from './components/entries/constants.js';
+import { BRAVA, HOMIES } from './helpers/constants.js';
 import Leaderboard from './components/leaderboard/Leaderboard';
 
 import nightKingKiller from './images/arya-night-king-2.gif'

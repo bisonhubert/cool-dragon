@@ -56,3 +56,7 @@ export const BONUS_2 = undefined
 // Leaderboard Types
 export const BRAVA = 'brava'
 export const HOMIES = 'homies'
+
+
+// Episode Info
+export const EPISODE_LIST = [3, 4, 5, 6]
