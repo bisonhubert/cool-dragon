@@ -1,4 +1,3 @@
-// TODO (Bison): separate each function out into its own file and test file inside a folder
 import * as fixtures from './fixtures.js';
 import * as scoring from './scoring.js'
 
