@@ -1,24 +1,16 @@
 import React from 'react';
 import './App.css';
 
-// import { bravaEntries, homieEntries } from './components/entries/entryData';
+// TODO (Bison): import only masterEntries, playerEntries and filter before passing to each leaderboard
+// TODO (Bison): calculate pot of leaderboard from within leaderboard using counter
+// TODO (Bison): include master entry at the bottom of the file, below bonuses
 import { bravaEntries, homieEntries, masterEntries, playerEntries } from './components/entries/entryData';
 import { BRAVA, HOMIES } from './helpers/constants.js';
 import Leaderboard from './components/leaderboard/Leaderboard';
 
 import nightKingKiller from './images/arya-night-king-2.gif'
 
-// import icon from './images/cool-dragon-2.gif';
-
 function App() {
-  // const getBravaEntries = () => {
-  //   // filter playerEntries for leaderboard = 'BRAVA'
-  // }
-
-  // const getHomieEntries = () => {
-  //   // filter playerEntries for leaderboard = 'HOMIE'
-  // }
-
   return (
     <div className="App">
       <header className="App-header">
