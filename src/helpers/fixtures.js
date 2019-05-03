@@ -381,7 +381,7 @@ export const masterEntries2 = [
 
 export const playerEntries1 = [
   {
-    player: 'bison',
+    playerName: 'bison',
     entry_doc_href: 'docBison',
     leaderboard: 'homies',
     alive: [ARYA, VARYS],
@@ -390,7 +390,7 @@ export const playerEntries1 = [
     bonuses: [undefined, ARYA]
   },
   {
-    player: 'vanessa',
+    playerName: 'vanessa',
     entry_doc_href: 'docVanessa',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
@@ -399,7 +399,7 @@ export const playerEntries1 = [
     bonuses: [EDD, BRONN]
   },
   {
-    player: 'toad',
+    playerName: 'toad',
     entry_doc_href: 'docToad',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
@@ -411,7 +411,7 @@ export const playerEntries1 = [
 
 export const playerEntriesTie1 = [
   {
-    player: 'bison',
+    playerName: 'bison',
     entry_doc_href: 'docBison',
     leaderboard: 'homies',
     alive: [ARYA, VARYS],
@@ -420,7 +420,7 @@ export const playerEntriesTie1 = [
     bonuses: [undefined, ARYA]
   },
   {
-    player: 'vanessa',
+    playerName: 'vanessa',
     entry_doc_href: 'docVanessa',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
@@ -429,7 +429,7 @@ export const playerEntriesTie1 = [
     bonuses: [EDD, BRONN]
   },
   {
-    player: 'toad',
+    playerName: 'toad',
     entry_doc_href: 'docToad',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
@@ -438,7 +438,7 @@ export const playerEntriesTie1 = [
     bonuses: [DROGON, DROGON]
   },
   {
-    player: 'toadTie',
+    playerName: 'toadTie',
     entry_doc_href: 'docToadTie',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
@@ -452,14 +452,14 @@ export const playerEntriesTie1 = [
 
 // Scored Entries
 export const scoredEntries1 = [
-  { player: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
-  { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
-  { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+  { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+  { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
 ]
 
 export const scoredEntriesTie1 = [
-  { player: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
-  { player: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 },
-  { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
-  { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+  { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+  { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 },
+  { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
 ]

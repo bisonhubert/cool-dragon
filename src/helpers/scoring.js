@@ -50,7 +50,7 @@ export const scorePlayerEntry = (masterEntry, playerEntry) => {
 export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
   return playerEntries.map(entry => {
     return {
-      player: entry.player,
+      playerName: entry.playerName,
       leaderboard: entry.leaderboard,
       entry_doc: entry.entry_doc_href,
       score: scorePlayerEntry(masterEntry, entry)
@@ -66,8 +66,8 @@ const sortEntriesByScore = scoredEntries => {
 
 const sortGroupedRankByName = groupedRank => {
   return groupedRank.sort(function(p1, p2){
-    if(p1.player < p2.player) { return -1; }
-    if(p1.player > p2.player) { return 1; }
+    if(p1.playerName < p2.playerName) { return -1; }
+    if(p1.playerName > p2.playerName) { return 1; }
     return 0;
   })
 }
