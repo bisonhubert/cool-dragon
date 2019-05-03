@@ -170,3 +170,52 @@ test('scorePlusTwoMinusOneVariant subtracts 1 point for an incorrect white walke
   expect(scoring.scorePlusTwoMinusOneVariant(fixtures.noWight, fixtures.eddPodWight)).toBe(-2);
   expect(scoring.scorePlusTwoMinusOneVariant(fixtures.eddWight, fixtures.eddPodWight)).toBe(1);
 })
+
+test('scoreBonusQuestions scores 0 points if bonus questions are not answered correctly', () => {
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.noBonusAnswered)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.firstBonusAnswered)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.secondBonusAnswered)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.bothBonusSame)).toBe(0);
+})
+
+test('scoreBonusQuestions scores 5 points if one bonus question is answered correctly', () => {
+  expect(scoring.scoreBonusQuestions(fixtures.firstBonusArya, fixtures.firstBonusArya)).toBe(5);
+  expect(scoring.scoreBonusQuestions(fixtures.secondBonusArya, fixtures.secondBonusArya)).toBe(5);
+  expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.firstBonusArya)).toBe(5);
+  expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.secondBonusArya)).toBe(5);
+  expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.bonus1AryaBonus2Pod)).toBe(5);
+  expect(scoring.scoreBonusQuestions(fixtures.bonus1AryaBonus2Pod, fixtures.bothBonusArya)).toBe(5);
+})
+
+test('scoreBonusQuestions scores 10 points if both bonus questions are answered correctly', () => {
+  expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.bothBonusArya)).toBe(10);
+  expect(scoring.scoreBonusQuestions(fixtures.bonus1AryaBonus2Pod, fixtures.bonus1AryaBonus2Pod)).toBe(10);
+})
+
+test("scoreBonusQuestions doesn't score more than 10 points", () => {
+  expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.extraBonusArya)).toBe(10);
+})
+
+test('scorePlayerEntry ', () => {
+  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
+  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
+  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
+})
+
+test('scorePlayerEntries ', () => {
+  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
+  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
+  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
+})
+
+test('groupAndRankPlayersByScore ', () => {
+  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
+  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
+  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
+})
+
+test('getEntriesForLeaderboard ', () => {
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+})

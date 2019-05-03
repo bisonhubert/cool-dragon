@@ -1,7 +1,5 @@
 // TODO (Bison): separate each function out into its own file and test file inside a folder
-export const getCurrentMaster = (masterEntries) => {
-  return masterEntries[masterEntries.length - 1];
-}
+export const getCurrentMaster = masterEntries => masterEntries[masterEntries.length - 1];
 
 export const scoreAlive = (masterEntry, playerEntry) => {
   if (masterEntry.alive.length === 0) { return 0 }
@@ -30,8 +28,16 @@ export const scorePlusTwoMinusOneVariant = (masterEntry, playerEntry) => {
   return correctWight.length * 2 - incorrectWight.length
 }
 
-export const scoreBonusQuestions = () => {
-
+export const scoreBonusQuestions = (masterEntry, playerEntry) => {
+  let score = 0;
+  for (let i = 0; i <= masterEntry.bonuses.length; i++) {
+    if (masterEntry.bonuses[i] && playerEntry.bonuses[i]) {
+      if (masterEntry.bonuses[i].toLowerCase() === playerEntry.bonuses[i].toLowerCase()) {
+        score += 5
+      }
+    }
+  }
+  return score
 }
 
 export const scorePlayerEntry = () => {
