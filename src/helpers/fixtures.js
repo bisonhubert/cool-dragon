@@ -456,3 +456,10 @@ export const scoredEntries1 = [
   { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
   { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
 ]
+
+export const scoredEntriesTie1 = [
+  { player: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+  { player: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 },
+  { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+]

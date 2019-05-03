@@ -237,7 +237,15 @@ test('groupAndRankScoredEntries collects entries by score in descending order', 
       [{ player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
     ],
   );
-  // expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntries2)).toEqual(
+})
 
-  // );
+test('groupAndRankScoredEntries sorts tied entries by name in ascending order', () => {
+  expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntriesTie1)).toEqual(
+    [
+      [{ player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+       { player: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }],
+      [{ player: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
+    ],
+  );
 })

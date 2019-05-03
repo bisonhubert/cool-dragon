@@ -64,24 +64,33 @@ const sortEntriesByScore = scoredEntries => {
   });
 }
 
+const sortGroupedRankByName = groupedRank => {
+  return groupedRank.sort(function(p1, p2){
+    if(p1.player < p2.player) { return -1; }
+    if(p1.player > p2.player) { return 1; }
+    return 0;
+  })
+}
+
 const groupEntriesByScore = sortedEntries => {
   // in [ {... score: 57}, {... score: 99}, {... score 6}, {... score 57} ]
   // out [[{... score: 99}], [{... score: 57}, {... score: 57}], [{... score 6}]]
   let groupedEntries = [],
-      nestedGroup = [];
+      groupedRank = [];
   sortedEntries.forEach((entry, indx) => {
-    if (nestedGroup.length === 0) {
-      nestedGroup.push(entry)
+    if (groupedRank.length === 0) {
+      groupedRank.push(entry)
     } else {
-      if (nestedGroup[0].score === entry.score) {
-        nestedGroup.push(entry)
+      if (groupedRank[0].score === entry.score) {
+        groupedRank.push(entry)
       } else {
-        groupedEntries.push(nestedGroup)
-        nestedGroup = [entry]
+        const sortedGroupedRank = sortGroupedRankByName(groupedRank);
+        groupedEntries.push(sortedGroupedRank)
+        groupedRank = [entry]
       }
     }
     if (indx === sortedEntries.length - 1) {
-      groupedEntries.push(nestedGroup)
+      groupedEntries.push(groupedRank)
     }
   });
   return groupedEntries
