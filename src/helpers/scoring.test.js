@@ -207,28 +207,55 @@ test('scorePlayerEntry correctly scores a single entry', () => {
 test('getScoredPlayerEntries should return modeled entry object', () => {
   expect(scoring.getScoredPlayerEntries(fixtures.masterEntries1[0], fixtures.playerEntries1)).toEqual(
     [
-      { player: 'bison', leaderboard: 'brava', entry_doc: 'docBison', score: 6 },
-      { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 },
-      { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 },
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }
     ]
   );
   expect(scoring.getScoredPlayerEntries(fixtures.masterEntries2[1], fixtures.playerEntries1)).toEqual(
     [
-      { player: 'bison', leaderboard: 'brava', entry_doc: 'docBison', score: 6 },
-      { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
-      { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+    ]
+  );
+  expect(scoring.getScoredPlayerEntries(fixtures.masterEntries2[1], fixtures.playerEntriesTie1)).toEqual(
+    [
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+      { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }
     ]
   );
 })
 
-test('groupAndRankPlayersByScore ', () => {
-  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
-  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
-  // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
+test('groupAndRankScoredEntries collects entries by score in descending order', () => {
+  expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntries1)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }],
+      [{ playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
+    ],
+  );
 })
 
-test('getEntriesForLeaderboard ', () => {
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
+test('groupAndRankScoredEntries sorts tied entries by name in ascending order', () => {
+  expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntriesTie1)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+       { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }],
+      [{ playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
+    ],
+  );
+  expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntriesTie2)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+       { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }],
+      [{ playerName: 'bison2', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa1', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+       { playerName: 'vanessa2', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }],
+      [{ playerName: 'bison1', leaderboard: 'homies', entry_doc: 'docBison', score: -6 }]
+    ],
+  );
 })

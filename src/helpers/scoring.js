@@ -50,18 +50,53 @@ export const scorePlayerEntry = (masterEntry, playerEntry) => {
 export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
   return playerEntries.map(entry => {
     return {
-      player: entry.player,
+      playerName: entry.playerName,
       leaderboard: entry.leaderboard,
       entry_doc: entry.entry_doc_href,
       score: scorePlayerEntry(masterEntry, entry)
     }
+  });
+}
+
+const sortEntriesByScore = scoredEntries => {
+  return scoredEntries.sort((entry1, entry2) => {
+    return entry2.score-entry1.score;
+  });
+}
+
+const sortGroupedRankByName = groupedRank => {
+  return groupedRank.sort(function(p1, p2){
+    if(p1.playerName < p2.playerName) { return -1; }
+    if(p1.playerName > p2.playerName) { return 1; }
+    return 0;
   })
 }
 
-export const groupAndRankPlayersByScore = (masterEntry, scoredPlayerEntries) => {
-
+const groupEntriesByScore = sortedEntries => {
+  // in [ {... score: 57}, {... score: 99}, {... score 6}, {... score 57} ]
+  // out [[{... score: 99}], [{... score: 57}, {... score: 57}], [{... score 6}]]
+  let groupedEntries = [],
+      groupedRank = [];
+  sortedEntries.forEach((entry, indx) => {
+    if (groupedRank.length === 0) {
+      groupedRank.push(entry)
+    } else {
+      if (groupedRank[0].score === entry.score) {
+        groupedRank.push(entry)
+      } else {
+        const sortedGroupedRank = sortGroupedRankByName(groupedRank);
+        groupedEntries.push(sortedGroupedRank)
+        groupedRank = [entry]
+      }
+    }
+    if (indx === sortedEntries.length - 1) {
+      groupedEntries.push(groupedRank)
+    }
+  });
+  return groupedEntries
 }
 
-export const getEntriesForLeaderboard = (rankedPlayers) => {
-
+export const groupAndRankScoredEntries = scoredEntries => {
+  const sortedEntries = sortEntriesByScore(scoredEntries);
+  return groupEntriesByScore(sortedEntries)
 }
