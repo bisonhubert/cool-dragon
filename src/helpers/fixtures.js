@@ -463,3 +463,12 @@ export const scoredEntriesTie1 = [
   { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
   { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
 ]
+
+export const scoredEntriesTie2 = [
+  { playerName: 'vanessa1', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { playerName: 'bison2', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+  { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 },
+  { playerName: 'vanessa2', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+  { playerName: 'bison1', leaderboard: 'homies', entry_doc: 'docBison', score: -6 },
+]

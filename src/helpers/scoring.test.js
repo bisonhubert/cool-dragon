@@ -248,4 +248,14 @@ test('groupAndRankScoredEntries sorts tied entries by name in ascending order', 
       [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
     ],
   );
+  expect(scoring.groupAndRankScoredEntries(fixtures.scoredEntriesTie2)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+       { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }],
+      [{ playerName: 'bison2', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa1', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+       { playerName: 'vanessa2', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }],
+      [{ playerName: 'bison1', leaderboard: 'homies', entry_doc: 'docBison', score: -6 }]
+    ],
+  );
 })
