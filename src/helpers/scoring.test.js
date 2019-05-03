@@ -202,13 +202,23 @@ test('scorePlayerEntry correctly scores a single entry', () => {
   expect(scoring.scorePlayerEntry(fixtures.entry3, fixtures.entry3)).toBe(18);
   expect(scoring.scorePlayerEntry(fixtures.entry4, fixtures.entry4)).toBe(18);
   expect(scoring.scorePlayerEntry(fixtures.entry5, fixtures.entry4)).toBe(-1);
-  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
 })
 
-test('scorePlayerEntries ', () => {
-  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
-  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
-  // expect(scoring.scorePlayerEntries(fixtures., fixtures.)).toBe();
+test('getScoredPlayerEntries should return modeled entry object', () => {
+  expect(scoring.getScoredPlayerEntries(fixtures.masterEntries1[0], fixtures.playerEntries1)).toEqual(
+    [
+      { player: 'bison', leaderboard: 'brava', entry_doc: 'docBison', score: 6 },
+      { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 },
+      { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }
+    ]
+  );
+  expect(scoring.getScoredPlayerEntries(fixtures.masterEntries2[1], fixtures.playerEntries1)).toEqual(
+    [
+      { player: 'bison', leaderboard: 'brava', entry_doc: 'docBison', score: 6 },
+      { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+      { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
+    ]
+  );
 })
 
 test('groupAndRankPlayersByScore ', () => {

@@ -350,5 +350,61 @@ export const entry6 = {
 
 
 
-// Entry Data
+// Complete Entries
 // ________________________________________________
+export const masterEntries1 = [
+  {
+    episode: 3,
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [GILLY, MISSANDEI],
+    bonuses: [undefined, BRONN]
+  }
+]
+
+export const masterEntries2 = [
+  {
+    episode: 3,
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [GILLY, MISSANDEI],
+    bonuses: [POD, undefined]
+  },
+  {
+    episode: 4,
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, VARYS, POD, MISSANDEI],
+    whiteWalker: [TORMUND, MISSANDEI],
+    bonuses: [DROGON, DROGON]
+  }
+]
+
+export const playerEntries1 = [
+  {
+    player: 'bison',
+    entry_doc_href: 'docBison',
+    leaderboard: 'brava',
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [TORMUND, MISSANDEI],
+    bonuses: [undefined, ARYA]
+  },
+  {
+    player: 'vanessa',
+    entry_doc_href: 'docVanessa',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, VARYS],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [EDD, BRONN]
+  },
+  {
+    player: 'toad',
+    entry_doc_href: 'docToad',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, EDD],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [DROGON, DROGON]
+  }
+]
