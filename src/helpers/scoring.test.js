@@ -158,3 +158,15 @@ test('scoreSinglePointVariant does not count duplicate implied dead guesses', ()
   expect(scoring.scoreSinglePointVariant(fixtures.eddPodWight, fixtures.drogonAliveAryaDeadEddPodWightBothImpliedDup)).toBe(2);
   expect(scoring.scoreSinglePointVariant(fixtures.eddPodWightImpliedDead, fixtures.drogonAliveAryaDeadEddPodWightBothImpliedDup)).toBe(2);
 })
+
+test('scorePlusTwoMinusOneVariant scores 2 points for a correct white walker guess', () => {
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.noWight, fixtures.noWight)).toBe(0);
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.eddWight, fixtures.eddWight)).toBe(2);
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.eddPodWight, fixtures.eddPodWight)).toBe(4);
+})
+
+test('scorePlusTwoMinusOneVariant subtracts 1 point for an incorrect white walker guess', () => {
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.noWight, fixtures.eddWight)).toBe(-1);
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.noWight, fixtures.eddPodWight)).toBe(-2);
+  expect(scoring.scorePlusTwoMinusOneVariant(fixtures.eddWight, fixtures.eddPodWight)).toBe(1);
+})

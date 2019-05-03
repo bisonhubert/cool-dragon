@@ -22,8 +22,12 @@ export const scoreSinglePointVariant = (masterEntry, playerEntry) => {
   return scoreAlive(masterEntry, playerEntry) + scoreDead(masterEntry, playerEntry)
 }
 
-export const scorePlusTwoMinusOneVariant = () => {
-
+export const scorePlusTwoMinusOneVariant = (masterEntry, playerEntry) => {
+  const distinctMasterWight = [...new Set(masterEntry.whiteWalker)],
+        distinctPlayerWight = [...new Set(playerEntry.whiteWalker)],
+        correctWight = distinctPlayerWight.filter(char => distinctMasterWight.includes(char)),
+        incorrectWight = distinctPlayerWight.filter(char => !distinctMasterWight.includes(char));
+  return correctWight.length * 2 - incorrectWight.length
 }
 
 export const scoreBonusQuestions = () => {
@@ -39,5 +43,9 @@ export const scorePlayerEntries = () => {
 }
 
 export const groupAndRankPlayersByScore = () => {
+
+}
+
+export const getEntriesForLeaderboard = () => {
 
 }
