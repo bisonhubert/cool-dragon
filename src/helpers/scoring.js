@@ -40,18 +40,24 @@ export const scoreBonusQuestions = (masterEntry, playerEntry) => {
   return score
 }
 
-export const scorePlayerEntry = () => {
+export const scorePlayerEntry = (masterEntry, playerEntry) => {
+  const aliveDeadScore = scoreSinglePointVariant(masterEntry, playerEntry),
+        wightScore = scorePlusTwoMinusOneVariant(masterEntry, playerEntry),
+        bonusScore = scoreBonusQuestions(masterEntry, playerEntry);
+    console.log('aliveDeadScore', aliveDeadScore)
+    console.log('wightScore', wightScore)
+    console.log('bonusScore', bonusScore)
+  return aliveDeadScore + wightScore + bonusScore
+}
+
+export const scorePlayerEntries = (masterEntries, playerEntries) => {
 
 }
 
-export const scorePlayerEntries = () => {
+export const groupAndRankPlayersByScore = (playerEntries) => {
 
 }
 
-export const groupAndRankPlayersByScore = () => {
-
-}
-
-export const getEntriesForLeaderboard = () => {
+export const getEntriesForLeaderboard = (rankedPlayers) => {
 
 }

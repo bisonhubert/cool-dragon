@@ -196,9 +196,12 @@ test("scoreBonusQuestions doesn't score more than 10 points", () => {
   expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.extraBonusArya)).toBe(10);
 })
 
-test('scorePlayerEntry ', () => {
-  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
-  // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
+test('scorePlayerEntry correctly scores a single entry', () => {
+  expect(scoring.scorePlayerEntry(fixtures.entry1, fixtures.entry1)).toBe(9);
+  expect(scoring.scorePlayerEntry(fixtures.entry2, fixtures.entry2)).toBe(10);
+  expect(scoring.scorePlayerEntry(fixtures.entry3, fixtures.entry3)).toBe(18);
+  expect(scoring.scorePlayerEntry(fixtures.entry4, fixtures.entry4)).toBe(18);
+  expect(scoring.scorePlayerEntry(fixtures.entry5, fixtures.entry4)).toBe(-1);
   // expect(scoring.scorePlayerEntry(fixtures., fixtures.)).toBe();
 })
 

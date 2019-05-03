@@ -301,3 +301,54 @@ export const multipleEntriesReverse = [
   entryEp2,
   entryEp1
 ]
+
+
+
+// Single Entries
+// ________________________________________________
+export const entry1 = {
+  alive: [ARYA],
+  dead: [BRONN],
+  whiteWalker: [BRONN],
+  bonuses: [EDD]
+}
+
+export const entry2 = {
+  alive: [ARYA],
+  dead: [BRONN],
+  whiteWalker: [DROGON],
+  bonuses: [EDD]
+}
+
+export const entry3 = {
+  alive: [ARYA, GILLY],
+  dead: [BRONN, MISSANDEI],
+  whiteWalker: [BRONN, MISSANDEI],
+  bonuses: [EDD, RHAEGAL]
+}
+
+export const entry4 = {
+  alive: [ARYA, GILLY],
+  dead: [],
+  whiteWalker: [BRONN, MISSANDEI],
+  bonuses: [EDD, RHAEGAL]
+}
+
+export const entry5 = {
+  alive: [ARYA, BRONN],
+  dead: [DROGON],
+  whiteWalker: [DROGON],
+  bonuses: [undefined, DROGON]
+}
+
+export const entry6 = {
+  alive: [],
+  dead: [],
+  whiteWalker: [],
+  bonuses: []
+}
+
+
+
+// Entry Data
+// ________________________________________________
