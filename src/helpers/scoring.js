@@ -58,10 +58,7 @@ export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
   })
 }
 
-export const groupAndRankPlayersByScore = (masterEntry, scoredPlayerEntries) => {
-
-}
-
-export const getEntriesForLeaderboard = (rankedPlayers) => {
-
+export const groupAndRankPlayersByScore = (scoredPlayerEntries) => {
+  // in [ {... score: 57}, {... score: 99}, {... score 6}, {... score 57}]
+  // out {1: [{... score: 99}], 2: [{... score: 57}, {... score: 57}], 4: [{... score 6}]},
 }

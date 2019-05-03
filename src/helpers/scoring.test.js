@@ -226,9 +226,3 @@ test('groupAndRankPlayersByScore ', () => {
   // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
   // expect(scoring.groupAndRankPlayersByScore(fixtures., fixtures.)).toBe();
 })
-
-test('getEntriesForLeaderboard ', () => {
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
-  // expect(scoring.getEntriesForLeaderboard()).toBe();
-})
