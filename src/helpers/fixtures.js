@@ -383,7 +383,7 @@ export const playerEntries1 = [
   {
     player: 'bison',
     entry_doc_href: 'docBison',
-    leaderboard: 'brava',
+    leaderboard: 'homies',
     alive: [ARYA, VARYS],
     dead: [GILLY, RHAEGAL],
     whiteWalker: [TORMUND, MISSANDEI],
@@ -407,4 +407,52 @@ export const playerEntries1 = [
     whiteWalker: [ARYA, TORMUND, EDD],
     bonuses: [DROGON, DROGON]
   }
+]
+
+export const playerEntriesTie1 = [
+  {
+    player: 'bison',
+    entry_doc_href: 'docBison',
+    leaderboard: 'homies',
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [TORMUND, MISSANDEI],
+    bonuses: [undefined, ARYA]
+  },
+  {
+    player: 'vanessa',
+    entry_doc_href: 'docVanessa',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, VARYS],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [EDD, BRONN]
+  },
+  {
+    player: 'toad',
+    entry_doc_href: 'docToad',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, EDD],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [DROGON, DROGON]
+  },
+  {
+    player: 'toadTie',
+    entry_doc_href: 'docToadTie',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, EDD],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [DROGON, DROGON]
+  }
+]
+
+
+
+// Scored Entries
+export const scoredEntries1 = [
+  { player: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+  { player: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+  { player: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }
 ]
