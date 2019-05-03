@@ -170,3 +170,33 @@ test('scorePlusTwoMinusOneVariant subtracts 1 point for an incorrect white walke
   expect(scoring.scorePlusTwoMinusOneVariant(fixtures.noWight, fixtures.eddPodWight)).toBe(-2);
   expect(scoring.scorePlusTwoMinusOneVariant(fixtures.eddWight, fixtures.eddPodWight)).toBe(1);
 })
+
+test('scoreBonusQuestions ', () => {
+  // expect(scoring.scoreBonusQuestions()).toBe();
+  // expect(scoring.scoreBonusQuestions()).toBe();
+  // expect(scoring.scoreBonusQuestions()).toBe();
+})
+
+test('scorePlayerEntry ', () => {
+  // expect(scoring.scorePlayerEntry()).toBe();
+  // expect(scoring.scorePlayerEntry()).toBe();
+  // expect(scoring.scorePlayerEntry()).toBe();
+})
+
+test('scorePlayerEntries ', () => {
+  // expect(scoring.scorePlayerEntries()).toBe();
+  // expect(scoring.scorePlayerEntries()).toBe();
+  // expect(scoring.scorePlayerEntries()).toBe();
+})
+
+test('groupAndRankPlayersByScore ', () => {
+  // expect(scoring.groupAndRankPlayersByScore()).toBe();
+  // expect(scoring.groupAndRankPlayersByScore()).toBe();
+  // expect(scoring.groupAndRankPlayersByScore()).toBe();
+})
+
+test('getEntriesForLeaderboard ', () => {
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+  // expect(scoring.getEntriesForLeaderboard()).toBe();
+})
