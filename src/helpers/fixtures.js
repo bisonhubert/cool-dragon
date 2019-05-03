@@ -301,3 +301,110 @@ export const multipleEntriesReverse = [
   entryEp2,
   entryEp1
 ]
+
+
+
+// Single Entries
+// ________________________________________________
+export const entry1 = {
+  alive: [ARYA],
+  dead: [BRONN],
+  whiteWalker: [BRONN],
+  bonuses: [EDD]
+}
+
+export const entry2 = {
+  alive: [ARYA],
+  dead: [BRONN],
+  whiteWalker: [DROGON],
+  bonuses: [EDD]
+}
+
+export const entry3 = {
+  alive: [ARYA, GILLY],
+  dead: [BRONN, MISSANDEI],
+  whiteWalker: [BRONN, MISSANDEI],
+  bonuses: [EDD, RHAEGAL]
+}
+
+export const entry4 = {
+  alive: [ARYA, GILLY],
+  dead: [],
+  whiteWalker: [BRONN, MISSANDEI],
+  bonuses: [EDD, RHAEGAL]
+}
+
+export const entry5 = {
+  alive: [ARYA, BRONN],
+  dead: [DROGON],
+  whiteWalker: [DROGON],
+  bonuses: [undefined, DROGON]
+}
+
+export const entry6 = {
+  alive: [],
+  dead: [],
+  whiteWalker: [],
+  bonuses: []
+}
+
+
+
+// Complete Entries
+// ________________________________________________
+export const masterEntries1 = [
+  {
+    episode: 3,
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [GILLY, MISSANDEI],
+    bonuses: [undefined, BRONN]
+  }
+]
+
+export const masterEntries2 = [
+  {
+    episode: 3,
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [GILLY, MISSANDEI],
+    bonuses: [POD, undefined]
+  },
+  {
+    episode: 4,
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, VARYS, POD, MISSANDEI],
+    whiteWalker: [TORMUND, MISSANDEI],
+    bonuses: [DROGON, DROGON]
+  }
+]
+
+export const playerEntries1 = [
+  {
+    player: 'bison',
+    entry_doc_href: 'docBison',
+    leaderboard: 'brava',
+    alive: [ARYA, VARYS],
+    dead: [GILLY, RHAEGAL],
+    whiteWalker: [TORMUND, MISSANDEI],
+    bonuses: [undefined, ARYA]
+  },
+  {
+    player: 'vanessa',
+    entry_doc_href: 'docVanessa',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, VARYS],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [EDD, BRONN]
+  },
+  {
+    player: 'toad',
+    entry_doc_href: 'docToad',
+    leaderboard: 'homies',
+    alive: [GILLY, RHAEGAL],
+    dead: [ARYA, EDD],
+    whiteWalker: [ARYA, TORMUND, EDD],
+    bonuses: [DROGON, DROGON]
+  }
+]

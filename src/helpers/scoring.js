@@ -5,7 +5,7 @@ export const scoreAlive = (masterEntry, playerEntry) => {
   if (masterEntry.alive.length === 0) { return 0 }
   const distinctMasterLiving = [...new Set(masterEntry.alive)],
         correctAlive = playerEntry.alive.filter(char => distinctMasterLiving.includes(char));
-  return [...new Set(correctAlive)].length
+  return [...new Set(correctAlive)] ? [...new Set(correctAlive)].length : 0
 }
 
 export const scoreDead = (masterEntry, playerEntry) => {
@@ -13,7 +13,7 @@ export const scoreDead = (masterEntry, playerEntry) => {
   const distinctMasterDead = [...new Set(masterEntry.dead.concat(masterEntry.whiteWalker))],
         guessedDead = [...new Set(playerEntry.whiteWalker.concat(playerEntry.dead))],
         correctDead = guessedDead.filter(char => distinctMasterDead.includes(char));
-  return [...new Set(correctDead)].length
+  return [...new Set(correctDead)] ? [...new Set(correctDead)].length : 0
 }
 
 export const scoreSinglePointVariant = (masterEntry, playerEntry) => {
@@ -40,18 +40,28 @@ export const scoreBonusQuestions = (masterEntry, playerEntry) => {
   return score
 }
 
-export const scorePlayerEntry = () => {
+export const scorePlayerEntry = (masterEntry, playerEntry) => {
+  const aliveDeadScore = scoreSinglePointVariant(masterEntry, playerEntry),
+        wightScore = scorePlusTwoMinusOneVariant(masterEntry, playerEntry),
+        bonusScore = scoreBonusQuestions(masterEntry, playerEntry);
+  return aliveDeadScore + wightScore + bonusScore
+}
+
+export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
+  return playerEntries.map(entry => {
+    return {
+      player: entry.player,
+      leaderboard: entry.leaderboard,
+      entry_doc: entry.entry_doc_href,
+      score: scorePlayerEntry(masterEntry, entry)
+    }
+  })
+}
+
+export const groupAndRankPlayersByScore = (masterEntry, scoredPlayerEntries) => {
 
 }
 
-export const scorePlayerEntries = () => {
-
-}
-
-export const groupAndRankPlayersByScore = () => {
-
-}
-
-export const getEntriesForLeaderboard = () => {
+export const getEntriesForLeaderboard = (rankedPlayers) => {
 
 }
