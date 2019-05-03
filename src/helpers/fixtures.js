@@ -245,6 +245,33 @@ export const drogonAliveAryaDeadEddPodWightBothImpliedDup = {
 
 
 
+// Bonus Questions
+// ________________________________________________
+export const noBonusAnswered = {
+  bonuses: [undefined, undefined]
+}
+
+export const bothBonusArya = {
+  bonuses: [ARYA, ARYA]
+}
+
+export const firstBonusArya = {
+  bonuses: [ARYA, undefined]
+}
+
+export const secondBonusArya = {
+  bonuses: [undefined, ARYA]
+}
+
+export const bonus1AryaBonus2Pod = {
+  bonuses: [ARYA, POD]
+}
+
+export const extraBonusArya = {
+  bonuses: [ARYA, ARYA, ARYA]
+}
+
+
 // Empty Entries
 // ________________________________________________
 export const entryEp1 = {
