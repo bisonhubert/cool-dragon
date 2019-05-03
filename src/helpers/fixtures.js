@@ -126,6 +126,14 @@ export const deadLongList = {
 
 // White Walker / Wight
 // ________________________________________________
+export const noWight = {
+  whiteWalker: []
+}
+
+export const eddWight = {
+  whiteWalker: [EDD]
+}
+
 export const eddPodWight = {
   alive: [],
   dead: [EDD, POD],
