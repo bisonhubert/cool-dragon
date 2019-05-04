@@ -8,7 +8,7 @@ export const scoreAlive = (masterEntry, playerEntry) => {
 }
 
 export const scoreDead = (masterEntry, playerEntry) => {
-  if (masterEntry.dead.length === 0 && masterEntry.whiteWalker.length == 0) { return 0 }
+  if (masterEntry.dead.length === 0 && masterEntry.whiteWalker.length === 0) { return 0 }
   const distinctMasterDead = [...new Set(masterEntry.dead.concat(masterEntry.whiteWalker))],
         guessedDead = [...new Set(playerEntry.whiteWalker.concat(playerEntry.dead))],
         correctDead = guessedDead.filter(char => distinctMasterDead.includes(char));
