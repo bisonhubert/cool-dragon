@@ -1,0 +1,18 @@
+/* todo: look up cool leaderboard examples online */
+
+.Leaderboard {
+    background-color: pink;
+    /*remove ^ */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Leaderboard h2 {
+    display: inline-block;
+    width: calc(75% - 2px);
+}
+
+.Leaderboard h6 {
+    display: inline-block;
+    width: calc(25% - 2px);
+}
