@@ -1,4 +1,3 @@
-// TODO (Bison): separate each function out into its own file and test file inside a folder
 export const getCurrentMaster = masterEntries => masterEntries[masterEntries.length - 1];
 
 export const scoreAlive = (masterEntry, playerEntry) => {
@@ -99,4 +98,10 @@ const groupEntriesByScore = sortedEntries => {
 export const groupAndRankScoredEntries = scoredEntries => {
   const sortedEntries = sortEntriesByScore(scoredEntries);
   return groupEntriesByScore(sortedEntries)
+}
+
+export const getEntriesForLeaderboard = (masterEntries, playerEntries) => {
+  const currentMaster = getCurrentMaster(masterEntries),
+        scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries);
+  return groupAndRankScoredEntries(scoredEntries);
 }

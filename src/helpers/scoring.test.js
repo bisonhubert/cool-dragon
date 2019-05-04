@@ -259,3 +259,28 @@ test('groupAndRankScoredEntries sorts tied entries by name in ascending order', 
     ],
   );
 })
+
+test('getEntriesForLeaderboard scores each player based on the latest episode master', () => {
+  expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries1, fixtures.playerEntries1)).toEqual(
+    [
+      [{ playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 }],
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }]
+    ]
+  );
+  expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries2, fixtures.playerEntries1)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 }],
+      [{ playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
+    ]
+  );
+  expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries2, fixtures.playerEntriesTie1)).toEqual(
+    [
+      [{ playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
+       { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 }],
+      [{ playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 }],
+      [{ playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }]
+    ]
+  );
+});
