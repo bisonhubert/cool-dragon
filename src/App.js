@@ -3,9 +3,6 @@
 import React from 'react';
 import './App.css';
 
-// ? can masterEntries this be in leaderboard
-import { getEntriesForLeaderboard } from './helpers/scoring.js';
-import { masterEntries, playerEntries } from './components/entries/entryData';
 import { LEADERBOARDS } from './helpers/constants.js';
 import Leaderboard from './components/leaderboard/Leaderboard';
 

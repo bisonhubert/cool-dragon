@@ -56,8 +56,8 @@ export const BONUS_2_ANSWER = undefined
 
 
 // Leaderboard Types
-export const BRAVA = 'brava'
-export const HOMIES = 'homies'
+export const BRAVA = 'Brava'
+export const HOMIES = 'Homies'
 export const LEADERBOARDS = [BRAVA, HOMIES]
 
 

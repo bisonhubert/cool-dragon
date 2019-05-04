@@ -1,29 +1,30 @@
+// TODO (Bison): make this a table
+// TODO (Bison): get player rank
+// TODO (Bison): capitalize props.entry.playerName
+
 import React from 'react';
 
 function Entry(props) {
-  // const getPlayersAndRank = () => {
-
-  // }
-
-  // const formatRankCharacter = () => {
-
-  // }
+  const computeRank = entry => {
+    // TODO (Bison): compute rank
+    return 1
+  }
 
   return (
     <div className="Entry">
       <article className="col">
-        <h2>{props.entry.rank}</h2>
+        <h4>Rank: {computeRank(props.entry)}</h4>
       </article>
       <article className="col">
-        <h2>{props.entry.player.toUpperCase()}</h2>
+        <h4>Player: {props.entry.playerName}</h4>
       </article>
       <article className="col">
-        <h3>{props.entry.score}</h3>
+        <h4>Score: {props.entry.score}</h4>
       </article>
       <article className="col">
-        <a href={props.entry.entry_doc_href}
+        <a href={props.entry.entry_doc}
              target="_blank"
-             rel="noopener noreferrer"><h4>Entry Doc</h4></a>
+             rel="noopener noreferrer">Entry</a>
       </article>
     </div>
   );
