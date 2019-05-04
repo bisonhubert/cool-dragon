@@ -58,9 +58,14 @@ export const BONUS_2_ANSWER = undefined
 // Leaderboard Types
 export const BRAVA = 'brava'
 export const HOMIES = 'homies'
+export const LEADERBOARDS = [BRAVA, HOMIES]
 
 
 // Scoring
 export const ALIVE = 'alive'
 export const DEAD = 'dead'
 export const WHITE_WALKER = 'whiteWalker'
+
+
+// Monies
+export const PRICE_PER_ENTRY = 5
