@@ -12,20 +12,28 @@ function Entry(props) {
 
   return (
     <div className="Entry">
-      <article className="col">
-        <h4>Rank: {computeRank(props.entry)}</h4>
-      </article>
-      <article className="col">
-        <h4>Player: {props.entry.playerName}</h4>
-      </article>
-      <article className="col">
-        <h4>Score: {props.entry.score}</h4>
-      </article>
-      <article className="col">
-        <a href={props.entry.entry_doc}
-             target="_blank"
-             rel="noopener noreferrer">Entry</a>
-      </article>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Entry Doc</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{computeRank(props.entry)}</td>
+            <td>{props.entry.playerName}</td>
+            <td>{props.entry.score}</td>
+            <td>
+              <a href={props.entry.entry_doc}
+                 target="_blank"
+                 rel="noopener noreferrer">Entry</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
