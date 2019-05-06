@@ -27,7 +27,7 @@ function Entry(props) {
             <td>{props.entry.playerName}</td>
             <td>{props.entry.score}</td>
             <td>
-              <a href={props.entry.entry_doc}
+              <a href="{props.entry.entry_doc}"
                  target="_blank"
                  rel="noopener noreferrer">Entry</a>
             </td>
