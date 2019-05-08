@@ -146,6 +146,42 @@ const playerEntries = [
     bonuses: [constants.JON_SNOW,constants.JON_SNOW,]
   },
   {
+    playerName: 'ana',
+    entry_doc: 'https://docs.google.com/document/d/13ilc0g9FydWbgVLgz-jrgDk4Rxca6-bxFw4gfV2Mhyk/edit?usp=sharing',
+    leaderboard: constants.HOMIES,
+    alive: [constants.JON_SNOW,constants.TYRION,constants.SANSA,constants.JAMIE,constants.SAM,constants.VARYS,constants.JORAH,constants.HOUND,constants.YARA,constants.MISSANDEI,constants.JAQEN,constants.MEERA,constants.GILLY,constants.SAM_JR,constants.HOT_PIE,constants.EDD,constants.ALYS,constants.RHAEGAL,],
+    dead: [constants.DAENERYS,constants.BRAN,constants.DAVOS,constants.MOUNTAIN,constants.BRONN,constants.DAARIO,constants.BERIC,constants.PODRICK,constants.ELLARIA,constants.QYBURN,constants.ROBIN,constants.NIGHT_KING,constants.QHONO,constants.VISERION,],
+    whiteWalker: [constants.CERSEI,constants.ARYA,constants.BRIENNE,constants.THEON,constants.MELISANDRE,constants.EURON,constants.TORMUND,constants.GENDRY,constants.GREY_WORM,constants.LYANNA,constants.YOHN,constants.HARRY,constants.WOLKAN,constants.DROGON,constants.GHOST,],
+    bonuses: [constants.TYRION,constants.SANSA]
+  },
+  {
+    playerName: 'keally',
+    entry_doc: 'https://docs.google.com/document/d/1HT9rW-B3lIYeZg46_60uHe9AkW03I3RIAnkbkrk-cIU/edit?usp=sharing',
+    leaderboard: constants.HOMIES,
+    alive: [constants.DAENERYS,constants.SANSA,constants.BRIENNE,constants.THEON,constants.SAM,constants.HOUND,constants.YARA,constants.MISSANDEI,constants.LYANNA,constants.EDD,constants.NIGHT_KING,constants.ALYS,],
+    dead: [constants.CERSEI,constants.TYRION,constants.ARYA,constants.JAMIE,constants.MOUNTAIN,constants.VARYS,constants.EURON,constants.BRONN,constants.TORMUND,constants.GENDRY,constants.GREY_WORM,constants.DAARIO,constants.JAQEN,constants.BERIC,constants.MEERA,constants.PODRICK,constants.GILLY,constants.SAM_JR,constants.ELLARIA,constants.QYBURN,constants.ROBIN,constants.HOT_PIE,constants.YOHN,constants.HARRY,constants.QHONO,constants.VISERION,constants.GHOST,],
+    whiteWalker: [constants.JON_SNOW,constants.BRAN,constants.DAVOS,constants.JORAH,constants.MELISANDRE,constants.WOLKAN,constants.DROGON,constants.RHAEGAL,],
+    bonuses: [constants.BRAN,constants.JON_SNOW,]
+  },
+  {
+    playerName: 'suzan / mom',
+    entry_doc: 'https://docs.google.com/document/d/19n6hjBemxU_1cLHje5k0_rFn60XKgqHveGchw60DRz8/edit?usp=sharing',
+    leaderboard: constants.HOMIES,
+    alive: [constants.JON_SNOW,constants.TYRION,constants.SANSA,constants.BRIENNE,constants.SAM,constants.PODRICK,constants.GILLY,constants.SAM_JR,constants.ELLARIA,constants.QHONO,constants.DROGON,constants.RHAEGAL,constants.GHOST,],
+    dead: [constants.DAENERYS,constants.ARYA,constants.JAMIE,constants.THEON,constants.DAVOS,constants.MOUNTAIN,constants.JORAH,constants.EURON,constants.HOUND,constants.BRONN,constants.GENDRY,constants.YARA,constants.GREY_WORM,constants.DAARIO,constants.JAQEN,constants.BERIC,constants.MEERA,constants.LYANNA,constants.QYBURN,constants.ROBIN,constants.HOT_PIE,constants.EDD,constants.NIGHT_KING,constants.YOHN,constants.HARRY,constants.ALYS,constants.WOLKAN,constants.VISERION,],
+    whiteWalker: [constants.CERSEI,constants.BRAN,constants.VARYS,constants.MELISANDRE,constants.TORMUND,constants.MISSANDEI,],
+    bonuses: [constants.ARYA,constants.JON_SNOW,]
+  },
+  {
+    playerName: 'tomas',
+    entry_doc: 'https://docs.google.com/document/d/1PWvSkO45iQ9prvyg5oGs8TLqE2qGN31fSg1sZUQbGI0/edit?usp=sharing',
+    leaderboard: constants.HOMIES,
+    alive: [constants.JON_SNOW,constants.TYRION,constants.SANSA,constants.JAMIE,constants.SAM,constants.DAVOS,constants.VARYS,constants.MELISANDRE,constants.BRONN,constants.TORMUND,constants.YARA,constants.MISSANDEI,constants.JAQEN,constants.BERIC,constants.MEERA,constants.PODRICK,constants.SAM_JR,constants.LYANNA,constants.ELLARIA,constants.ROBIN,constants.HOT_PIE,constants.EDD,constants.QHONO,constants.DROGON,constants.RHAEGAL,],
+    dead: [constants.DAENERYS,constants.CERSEI,constants.JORAH,constants.HOUND,constants.GENDRY,constants.DAARIO,constants.QYBURN,constants.NIGHT_KING,constants.WOLKAN,constants.VISERION,],
+    whiteWalker: [constants.ARYA,constants.BRAN,constants.BRIENNE,constants.THEON,constants.MOUNTAIN,constants.EURON,constants.GREY_WORM,constants.GILLY,constants.YOHN,constants.HARRY,constants.ALYS,constants.GHOST,],
+    bonuses: [constants.ARYA,constants.JON_SNOW,]
+  },
+  {
     playerName: 'vanessa',
     entry_doc: 'https://docs.google.com/document/d/1o4VyvQL6kxCi7bRJuRDOWIargWkL_ca1R0AQWfpcJ_Q/edit?usp=sharing',
     leaderboard: constants.HOMIES,
@@ -158,46 +194,10 @@ const playerEntries = [
     playerName: 'will',
     entry_doc: 'https://docs.google.com/document/d/1fohq8mrvrNlm9YClZZ4TsrhIuXuxoXIib8wXti93yEg/edit?usp=sharing',
     leaderboard: constants.HOMIES,
-    alive: [],
-    dead: [],
-    whiteWalker: [],
-    bonuses: []
-  },
-  {
-    playerName: 'suzan',
-    entry_doc: 'https://docs.google.com/document/d/19n6hjBemxU_1cLHje5k0_rFn60XKgqHveGchw60DRz8/edit?usp=sharing',
-    leaderboard: constants.HOMIES,
-    alive: [],
-    dead: [],
-    whiteWalker: [],
-    bonuses: []
-  },
-  {
-    playerName: 'tomas',
-    entry_doc: 'https://docs.google.com/document/d/1PWvSkO45iQ9prvyg5oGs8TLqE2qGN31fSg1sZUQbGI0/edit?usp=sharing',
-    leaderboard: constants.HOMIES,
-    alive: [],
-    dead: [],
-    whiteWalker: [],
-    bonuses: []
-  },
-  {
-    playerName: 'ana',
-    entry_doc: 'https://docs.google.com/document/d/13ilc0g9FydWbgVLgz-jrgDk4Rxca6-bxFw4gfV2Mhyk/edit?usp=sharing',
-    leaderboard: constants.HOMIES,
-    alive: [],
-    dead: [],
-    whiteWalker: [],
-    bonuses: []
-  },
-  {
-    playerName: 'keally',
-    entry_doc: 'https://docs.google.com/document/d/1HT9rW-B3lIYeZg46_60uHe9AkW03I3RIAnkbkrk-cIU/edit?usp=sharing',
-    leaderboard: constants.HOMIES,
-    alive: [],
-    dead: [],
-    whiteWalker: [],
-    bonuses: []
+    alive: [constants.JON_SNOW,constants.TYRION,constants.SANSA,constants.SAM,constants.BRONN,constants.GENDRY,constants.YARA,constants.DAARIO,constants.JAQEN,constants.MEERA,constants.PODRICK,constants.GILLY,constants.SAM_JR,constants.HOT_PIE,constants.EDD,constants.YOHN,constants.HARRY,constants.ALYS,constants.WOLKAN,constants.QHONO,constants.RHAEGAL,],
+    dead: [constants.DAENERYS,constants.CERSEI,constants.BRAN,constants.THEON,constants.DAVOS,constants.MOUNTAIN,constants.VARYS,constants.MELISANDRE,constants.EURON,constants.TORMUND,constants.GREY_WORM,constants.MISSANDEI,constants.LYANNA,constants.ELLARIA,constants.QYBURN,constants.ROBIN,constants.NIGHT_KING,constants.DROGON,constants.VISERION,constants.GHOST,],
+    whiteWalker: [constants.ARYA,constants.JAMIE,constants.BRIENNE,constants.JORAH,constants.HOUND,constants.BERIC,],
+    bonuses: [constants.TYRION,constants.SANSA,]
   },
 ]
 
