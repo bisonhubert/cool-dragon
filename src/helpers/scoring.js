@@ -47,7 +47,7 @@ export const scorePlayerEntry = (masterEntry, playerEntry) => {
 }
 
 export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
-  return playerEntries.map((entry, indx) => {
+  return playerEntries.map(entry => {
     return {
       playerName: entry.playerName,
       leaderboard: entry.leaderboard,
