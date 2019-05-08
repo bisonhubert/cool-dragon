@@ -253,9 +253,9 @@ test('sortEntriesByScore sorts tied entries by name in descending order', () => 
 test('getEntriesForLeaderboard scores each player based on the episode master', () => {
   expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries1, fixtures.playerEntries1)).toEqual(
     [
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
-      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 },
-      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 1 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2, rank: 2 },
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3, rank: 3 }
     ]
   )
 });
@@ -263,9 +263,9 @@ test('getEntriesForLeaderboard scores each player based on the episode master', 
 test('getEntriesForLeaderboard scores each player based on the latest episode master', () => {
   expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries2, fixtures.playerEntries1)).toEqual(
     [
-      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
-      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 },
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14, rank: 1 },
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 2 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5, rank: 3 },
     ]
   )
 });
@@ -273,10 +273,10 @@ test('getEntriesForLeaderboard scores each player based on the latest episode ma
 test('getEntriesForLeaderboard scores each player based on the latest episode master and sorts ties by name in descending order', () => {
   expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries2, fixtures.playerEntriesTie1)).toEqual(
     [
-      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14 },
-      { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14 },
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
-      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5 }
+      { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14, rank: 1 },
+      { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14, rank: 1 },
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 2 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5, rank: 3 }
     ]
   );
 });

@@ -63,8 +63,19 @@ export const sortEntriesByScore = scoredEntries => {
   });
 }
 
+export const rankEntries = sortedEntries => {
+  let rank = 1, prevIndx = 0;
+  return sortedEntries.map((entry, indx) => {
+    if (indx !== 0 && sortedEntries[prevIndx].score !== entry.score) { rank++ }
+    entry['rank'] = rank
+    prevIndx = indx
+    return entry
+  });
+}
+
 export const getEntriesForLeaderboard = (masterEntries, playerEntries) => {
   const currentMaster = getCurrentMaster(masterEntries),
-        scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries);
-  return sortEntriesByScore(scoredEntries);
+        scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries),
+        sortedEntries = sortEntriesByScore(scoredEntries);
+        return rankEntries(sortedEntries);
 }
