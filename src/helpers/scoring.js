@@ -63,13 +63,11 @@ export const sortEntriesByScore = scoredEntries => {
   });
 }
 
-export const determineRank = sortedEntries => {
-  let rankKey = 'rank',
-      rank = 1,
-      prevIndx = 0;
+export const rankEntries = sortedEntries => {
+  let rank = 1, prevIndx = 0;
   return sortedEntries.map((entry, indx) => {
     if (indx !== 0 && sortedEntries[prevIndx].score !== entry.score) { rank++ }
-    entry[rankKey] = rank
+    entry['rank'] = rank
     prevIndx = indx
     return entry
   });
@@ -78,7 +76,6 @@ export const determineRank = sortedEntries => {
 export const getEntriesForLeaderboard = (masterEntries, playerEntries) => {
   const currentMaster = getCurrentMaster(masterEntries),
         scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries),
-        sortedEntries = sortEntriesByScore(scoredEntries),
-        rankedEntries = determineRank(sortedEntries);
-        return sortedEntries;
+        sortedEntries = sortEntriesByScore(scoredEntries);
+        return rankEntries(sortedEntries);
 }
