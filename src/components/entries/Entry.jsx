@@ -1,4 +1,3 @@
-// TODO (Bison): get player rank
 // TODO (Bison): capitalize props.entry.playerName
 
 import React from 'react';
