@@ -18,8 +18,8 @@ function Leaderboard(props) {
   const sortedEntries = getEntriesForLeaderboard(masterEntries, entries)
 
   const entryComponents = sortedEntries.map((entry, indx) => {
-    return <Entry key={indx + 1} entry={entry} />
-  })
+    return <Entry key={indx + 1} entry={entry}  />
+  });
 
   return (
     <div className="Leaderboard">

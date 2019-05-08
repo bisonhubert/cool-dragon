@@ -47,7 +47,7 @@ export const scorePlayerEntry = (masterEntry, playerEntry) => {
 }
 
 export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
-  return playerEntries.map(entry => {
+  return playerEntries.map((entry, indx) => {
     return {
       playerName: entry.playerName,
       leaderboard: entry.leaderboard,
@@ -63,8 +63,22 @@ export const sortEntriesByScore = scoredEntries => {
   });
 }
 
+export const determineRank = sortedEntries => {
+  let rankKey = 'rank',
+      rank = 1,
+      prevIndx = 0;
+  return sortedEntries.map((entry, indx) => {
+    if (indx !== 0 && sortedEntries[prevIndx].score !== entry.score) { rank++ }
+    entry[rankKey] = rank
+    prevIndx = indx
+    return entry
+  });
+}
+
 export const getEntriesForLeaderboard = (masterEntries, playerEntries) => {
   const currentMaster = getCurrentMaster(masterEntries),
-        scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries);
-  return sortEntriesByScore(scoredEntries);
+        scoredEntries = getScoredPlayerEntries(currentMaster, playerEntries),
+        sortedEntries = sortEntriesByScore(scoredEntries),
+        rankedEntries = determineRank(sortedEntries);
+        return sortedEntries;
 }
