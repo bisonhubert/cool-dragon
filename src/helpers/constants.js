@@ -50,17 +50,20 @@ export const YOHN = 'Yohn Royce'
 
 // Bonus Questions
 export const BONUS_1 = 'bonus1'
-export const BONUS_1_ANSWER = ['Arya', ARYA]
 export const BONUS_2 = 'bonus2'
-export const BONUS_2_ANSWER = undefined
 
 
 // Leaderboard Types
-export const BRAVA = 'brava'
-export const HOMIES = 'homies'
+export const BRAVA = 'Brava'
+export const HOMIES = 'Homies'
+export const LEADERBOARDS = [BRAVA, HOMIES]
 
 
 // Scoring
 export const ALIVE = 'alive'
 export const DEAD = 'dead'
 export const WHITE_WALKER = 'whiteWalker'
+
+
+// Monies
+export const PRICE_PER_ENTRY = 5
