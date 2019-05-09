@@ -47,7 +47,7 @@ const playerEntries = [
     bonuses: [constants.JON_SNOW,undefined]
   },
   {
-    playerName: 'kate #1',
+    playerName: 'kate',
     entry_doc: 'https://docs.google.com/document/d/1hF3ogN_OWA4JooZzcoBT9Ke1qDm-FUNAYzUphMc9lkU/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.JON_SNOW,constants.TYRION,constants.BRAN,constants.SAM,constants.GENDRY,constants.JAQEN,constants.LYANNA,],
@@ -56,7 +56,7 @@ const playerEntries = [
     bonuses: [constants.DAENERYS,constants.JON_SNOW,]
   },
   {
-    playerName: 'kate #2',
+    playerName: 'kate',
     entry_doc: 'https://docs.google.com/document/d/1rxBVbadYHrk-467XgwOYHaLvTOWfXXh4TlUKb9aUm7Y/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.DAENERYS,constants.SANSA,constants.BRAN,constants.SAM,constants.BRONN,constants.GHOST,],
@@ -65,7 +65,7 @@ const playerEntries = [
     bonuses: [constants.JON_SNOW,constants.SANSA,]
   },
   {
-    playerName: 'kate #3',
+    playerName: 'kate',
     entry_doc: 'https://docs.google.com/document/d/1aPxLXpAAOUNzw0NhM_1TfUcoxUM1cVm3nw-5tFQJq1M/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.DROGON,constants.RHAEGAL,constants.GHOST,],
@@ -74,7 +74,7 @@ const playerEntries = [
     bonuses: [constants.ARYA,undefined]
   },
   {
-    playerName: 'kate #4',
+    playerName: 'kate',
     entry_doc: 'https://docs.google.com/document/d/1GaE0oI3vJzkHtkR9BNFmDJ4wHxFOM9KGuWG7AKFpIU4/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.DAENERYS,constants.SANSA,],
@@ -92,7 +92,7 @@ const playerEntries = [
     bonuses: [constants.BRAN,constants.SANSA,]
   },
   {
-    playerName: 'meg #1',
+    playerName: 'meg',
     entry_doc: 'https://docs.google.com/document/d/1Je4OFAh5bqMihIC_-55gmtLENVoPjB7dR4ReAdsJ5ks/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.DAENERYS,constants.SANSA,constants.SAM,constants.BRONN,constants.YARA,constants.MISSANDEI,constants.DAARIO,constants.JAQEN,constants.MEERA,constants.SAM_JR,constants.LYANNA,constants.ROBIN,constants.HOT_PIE,constants.ALYS,],
@@ -101,7 +101,7 @@ const playerEntries = [
     bonuses: [constants.JON_SNOW,constants.DAENERYS]
   },
   {
-    playerName: 'meg #2',
+    playerName: 'meg',
     entry_doc: 'https://docs.google.com/document/d/1YUtP8Cr8nEJOrDreEeyS8V2i2SUyCgtphtg-YN9hK_M/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.DAENERYS,constants.SANSA,constants.BRAN,constants.SAM,constants.BRONN,constants.YARA,constants.MISSANDEI,constants.DAARIO,constants.JAQEN,constants.MEERA,constants.GILLY,constants.SAM_JR,constants.LYANNA,constants.ROBIN,constants.HOT_PIE,constants.ALYS,constants.DROGON,],
@@ -110,7 +110,7 @@ const playerEntries = [
     bonuses: [constants.JON_SNOW,constants.DAENERYS,]
   },
   {
-    playerName: 'meg #3',
+    playerName: 'meg',
     entry_doc: 'https://docs.google.com/document/d/1Ue1xJS5wVW-AEWvqBlfPoKbhEj9jNpEvCJn6hWt2Ujg/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.SAM,constants.DAARIO,constants.JAQEN,constants.SAM_JR,constants.ROBIN,constants.HOT_PIE,],
@@ -119,7 +119,7 @@ const playerEntries = [
     bonuses: [constants.DAENERYS,undefined]
   },
   {
-    playerName: 'meg #4',
+    playerName: 'meg',
     entry_doc: 'https://docs.google.com/document/d/1n1f9RVgUvHnOD6KZ1FEWiIjDc9eKOkci37_0AWMBlwk/edit?usp=sharing',
     leaderboard: constants.BRAVA,
     alive: [constants.HOT_PIE,],
