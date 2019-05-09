@@ -13,10 +13,6 @@
   width: 100%;
 }
 
-.App-header {
-
-}
-
 .Leaderboard {
   width: 90%;
   margin: 0 auto 50px;
@@ -27,7 +23,7 @@
 }
 
 .Leaderboard caption h2 {
-  padding: 8px 0;
+  margin: 8px 0;
 }
 
 .Leaderboard caption h3 {
@@ -41,11 +37,11 @@
 }
 
 .Leaderboard th {
-  padding: 15px 0;
+  margin: 15px 0;
 }
 
 .Leaderboard td {
-  padding: 10px 0;
+  margin: 10px 0;
 }
 
 .Bonus article {
@@ -74,5 +70,44 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .App {
+    padding: 45px 30px;
+  }
+
+  .App-logo-container {
+    width: 300px;
+  }
+
+  .Leaderboard caption h2 {
+    padding: 15px 0;
+  }
+
+  .Leaderboard th {
+    margin: 25px 0;
+  }
+
+  .Leaderboard td {
+    margin: 20px 0;
+  }
+
+  .Bonus article {
+    margin-bottom: 75px;
+  }
+
+  .Bonus h4 {
+    margin-bottom: 20px;
+  }
+
+  .Bonus h6 {
+    margin-bottom: 30px;
+  }
+
+  .Footer-img-container {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
