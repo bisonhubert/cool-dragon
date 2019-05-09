@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="">
-        <h1>{getCoolDragonHeading()}</h1>
+        <h1 className="c--white">{getCoolDragonHeading()}</h1>
         <img src={coolDragon} alt="Flying dragon animation that changes colors" className="hidden"/>
       </header>
       <main>
@@ -42,13 +42,13 @@ function App() {
       </main>
       <footer>
         <article className="w-100p">
-          <h4>Who kills the Night King?</h4>
-          <h5>{ARYA}</h5>
+          <h4 className="c--white">Who kills the Night King?</h4>
+          <h5 className="c--white">{ARYA}</h5>
           <img src={nightKingKiller} alt="Arya killing The Night King" />
         </article>
         <article className="w-100p">
-          <h4>Who holds the Iron Throne at the end?</h4>
-          <h5>Currently: {CERSEI}</h5>
+          <h4 className="c--white">Who holds the Iron Throne at the end?</h4>
+          <h5 className="c--white">Currently: {CERSEI}</h5>
           <img src={ironThroneSitter} alt="Cersei rocking the Iron Throne" />
         </article>
       </footer>
