@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* make this slide up infinitely without moving the text up */
+  background-image: url('./images/stars.gif');
 }
 
 .App-logo {
@@ -23,15 +25,15 @@
   color: #61dafb;
 }
 
-@keyframes coolDragon-spin {
+.hidden {
+  display: none;
+}
+
+@keyframes 360-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-
-.hidden {
-  display: none;
 }

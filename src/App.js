@@ -2,11 +2,15 @@
 // TODO (Bison): add new component, Bonus.jsx
 
 import React from 'react';
+import './reset.css';
 import './App.css';
+
 
 import Leaderboard from './components/leaderboard/Leaderboard';
 
 import { ARYA, CERSEI, LEADERBOARDS } from './helpers/constants.js';
+import { masterEntries } from './components/entries/entryData';
+import { getCurrentMaster } from './helpers/scoring.js';
 
 import nightKingKiller from './images/arya-night-king-2.gif'
 import ironThroneSitter from './images/cersei-throne.gif'
@@ -17,10 +21,20 @@ function App() {
     return <Leaderboard boardName={boardName} key={indx + 1} />
   });
 
+  const getCoolDragonHeading = () => {
+    const currentMaster = getCurrentMaster(masterEntries);
+    if (currentMaster.episode === 6) {
+      // add congrats to winner
+      return `Game Over.\nThanks for playing`
+    } else {
+      return `Scores After Episode ${currentMaster.episode}`
+    }
+  }
+
   return (
     <div className="App">
       <header className="">
-        <h1>Cool Dragon</h1>
+        <h1>{getCoolDragonHeading()}</h1>
         <img src={coolDragon} alt="Flying dragon animation that changes colors" className="hidden"/>
       </header>
       <main>
