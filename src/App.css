@@ -1,25 +1,54 @@
 .App {
   text-align: center;
-  /* make this slide up infinitely without moving the text up */
   background-image: url('./images/stars.gif');
   padding: 40px 15px;
 }
 
+.App-logo-container {
+  width: 75%;
+  margin: 0 auto 20px;
+}
+
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+
+.Leaderboard {
+  width: 90%;
+  margin: 0 auto;
+
+  /* REMOVE */
+  /*background-color: white;*/
+}
+
+.Leaderboard table {
+  width: 100%;
+}
+
+.Leaderboard caption h2 {
+  padding: 8px 0;
+}
+
+.Leaderboard caption h2 {
+  padding: 8px 0;
+}
+
+.Leaderboard th,
+.Leaderboard td {
+  width: calc(25%);
+  display: inline-block;
+}
+
+.Leaderboard th {
+  padding: 10px 0;
+}
+
+.Leaderboard td {
+  padding: 10px 0;
 }
 
 .hidden {
@@ -33,19 +62,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.Leaderboard {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.Leaderboard h2 {
-    display: inline-block;
-    width: calc(75% - 2px);
-}
-
-.Leaderboard h6 {
-    display: inline-block;
-    width: calc(25% - 2px);
 }

@@ -26,57 +26,43 @@ h6 {
     font-size: 12px;
 }
 
-@media screen and (min-width: 375px) {
-    h4 {
-        font-size: 14px;
-    }
-
-    h5 {
-        font-size: 14px;
-    }
-
-    h6 {
-        font-size: 12px;
-    }
-}
-
 .c--blue {
-  color: #0497F6;
+    color: #0497F6;
 }
 
 .c--green {
-  color: #00FF07;
+    color: #00FF07;
 }
 
 .c--orange {
-  color: #EA741E;
+    color: #EA741E;
 }
 
 .c--pink {
-  color: #FB87D1;
+    color: #FB87D1;
 }
 
 .c--red {
-  color: #E54023;
+    color: #E54023;
 }
 
 .c--white {
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .c--yellow {
-  color: #FDF611;
+    color: #FDF611;
 }
 
 .link__c--pink,
 .link__c--pink:active,
 .link__c--pink:visited,
 .link__c--pink:focus {
-  color: #FB87D1;
+    color: #FB87D1;
 }
 
 .link__c--pink:hover {
-  color: #F54250;
+    color: #F54250;
 }
 
 a {

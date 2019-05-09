@@ -33,9 +33,11 @@ function App() {
 
   return (
     <div className="App">
-      <header className="">
+      <header className="App-header">
         <h1 className="c--white">{getCoolDragonHeading()}</h1>
-        <img src={coolDragon} alt="Flying dragon animation that changes colors" className="hidden"/>
+        <article className="App-logo-container">
+          <img src={coolDragon} alt="Flying dragon animation that changes colors" className="App-logo"/>
+        </article>
       </header>
       <main>
         {leaderboardComponents}
