@@ -43,12 +43,12 @@ function App() {
       <footer>
         <article className="w-100p">
           <h4 className="c--white">Who kills the Night King?</h4>
-          <h5 className="c--white">{ARYA}</h5>
+          <h6 className="c--white">{ARYA}</h6>
           <img src={nightKingKiller} alt="Arya killing The Night King" />
         </article>
         <article className="w-100p">
           <h4 className="c--white">Who holds the Iron Throne at the end?</h4>
-          <h5 className="c--white">Currently: {CERSEI}</h5>
+          <h6 className="c--white">Currently: {CERSEI}</h6>
           <img src={ironThroneSitter} alt="Cersei rocking the Iron Throne" />
         </article>
       </footer>

@@ -9,9 +9,9 @@ function Entry(props) {
         <td><h5 className="c--yellow">{props.entry.rank}</h5></td>
         <td><h5 className="c--blue">{capitalizeFirstLetter(props.entry.playerName)}</h5></td>
         <td><h5 className="c--green">{props.entry.score}</h5></td>
-        <td><a href="{props.entry.entry_doc}"
+        <td><a href={props.entry.entry_doc}
              target="_blank"
-             rel="noopener noreferrer"><h5 className="link__c--pink">Entry</h5>
+             rel="noopener noreferrer"><h5 className="link__c--pink">📝</h5>
         </a></td>
       </tr>
     </tbody>

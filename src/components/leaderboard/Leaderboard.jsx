@@ -5,7 +5,6 @@ import './Leaderboard.css';
 import '../../typography.css';
 
 import { getEntriesForLeaderboard } from '../../helpers/scoring.js'
-import { BRAVA } from '../../helpers/constants.js';
 import { masterEntries, playerEntries } from '../entries/entryData';
 import { PRICE_PER_ENTRY } from '../../helpers/constants.js';
 
@@ -32,10 +31,10 @@ function Leaderboard(props) {
           </caption>
           <thead>
             <tr>
-              <th><h4>Rank</h4></th>
-              <th><h4>Player</h4></th>
-              <th><h4>Score</h4></th>
-              <th><h4>Entry Doc</h4></th>
+              <th><h4 className="c--yellow">Rank</h4></th>
+              <th><h4 className="c--blue">Player</h4></th>
+              <th><h4 className="c--green">Score</h4></th>
+              <th><h4 className="c--pink">Entry</h4></th>
             </tr>
           </thead>
           {entryComponents}

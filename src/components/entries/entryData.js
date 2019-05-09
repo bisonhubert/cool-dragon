@@ -164,7 +164,7 @@ const playerEntries = [
     bonuses: [constants.BRAN,constants.JON_SNOW,]
   },
   {
-    playerName: 'suzan / mom',
+    playerName: 'suzan',
     entry_doc: 'https://docs.google.com/document/d/19n6hjBemxU_1cLHje5k0_rFn60XKgqHveGchw60DRz8/edit?usp=sharing',
     leaderboard: constants.HOMIES,
     alive: [constants.JON_SNOW,constants.TYRION,constants.SANSA,constants.BRIENNE,constants.SAM,constants.PODRICK,constants.GILLY,constants.SAM_JR,constants.ELLARIA,constants.QHONO,constants.DROGON,constants.RHAEGAL,constants.GHOST,],
