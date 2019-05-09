@@ -1,37 +1,78 @@
 .App {
   text-align: center;
+  background-image: url('./images/stars.gif');
+  padding: 25px 15px;
+}
+
+.App-logo-container {
+  width: 75%;
+  margin: 0 auto 20px;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.Leaderboard {
+  width: 90%;
+  margin: 0 auto 50px;
 }
 
-@keyframes coolDragon-spin {
+.Leaderboard table {
+  width: 100%;
+}
+
+.Leaderboard caption h2 {
+  padding: 8px 0;
+}
+
+.Leaderboard caption h3 {
+  margin: 15px 0;
+}
+
+.Leaderboard th,
+.Leaderboard td {
+  width: calc(25%);
+  display: inline-block;
+}
+
+.Leaderboard th {
+  padding: 15px 0;
+}
+
+.Leaderboard td {
+  padding: 10px 0;
+}
+
+.Bonus article {
+  margin-bottom: 50px;
+}
+
+.Bonus h4 {
+  margin-bottom: 10px;
+}
+
+.Bonus h6 {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.w--100p {
+  width: 100%;
+}
+
+@keyframes 360-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
-
-.hidden {
-  display: none;
 }

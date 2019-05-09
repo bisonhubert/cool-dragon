@@ -1,27 +1,91 @@
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
 h1 {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 2;
 }
 
 h2 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 16px;
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
     font-size: 14px;
 }
 
-.ta--left {
-    text-align: left;
+h3 {
+    font-size: 12px;
+}
+
+h4 {
+    font-size: 10px;
+}
+
+h5 {
+    font-size: 10px;
+}
+
+h6 {
+    font-size: 10px;
+}
+
+.Bonus h4,
+.Bonus h5,
+.Bonus h6 {
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 375px) {
+    h4 {
+    font-size: 12px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+}
+
+.c--blue {
+    color: #0497F6;
+}
+
+.c--green {
+    color: #00FF07;
+}
+
+.c--orange {
+    color: #EA741E;
+}
+
+.c--pink {
+    color: #FB87D1;
+}
+
+.c--red {
+    color: #E54023;
+}
+
+.c--white {
+    color: #FFFFFF;
+}
+
+.c--yellow {
+    color: #FDF611;
+}
+
+.link__c--pink,
+.link__c--pink:active,
+.link__c--pink:visited,
+.link__c--pink:focus {
+    color: #FB87D1;
+}
+
+.link__c--pink:hover {
+    color: #F54250;
+}
+
+a {
+    text-decoration: none;
 }

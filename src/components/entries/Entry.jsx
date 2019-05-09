@@ -1,33 +1,20 @@
-// TODO (Bison): capitalize props.entry.playerName
-
 import React from 'react';
 
 function Entry(props) {
+  const capitalizeFirstLetter = str => str.charAt(0).toUpperCase() + str.slice(1);
+
   return (
-    <div className="Entry">
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Score</th>
-            <th>Entry Doc</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{props.entry.rank}</td>
-            <td>{props.entry.playerName}</td>
-            <td>{props.entry.score}</td>
-            <td>
-              <a href="{props.entry.entry_doc}"
-                 target="_blank"
-                 rel="noopener noreferrer">Entry</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <tbody className="Entry">
+      <tr>
+        <td><h5 className="c--yellow">{props.entry.rank}</h5></td>
+        <td><h5 className="c--blue">{capitalizeFirstLetter(props.entry.playerName)}</h5></td>
+        <td><h5 className="c--green">{props.entry.score}</h5></td>
+        <td><a href={props.entry.entry_doc}
+             target="_blank"
+             rel="noopener noreferrer"><h5 className="link__c--pink">📝</h5>
+        </a></td>
+      </tr>
+    </tbody>
   );
 }
 

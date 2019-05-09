@@ -51,7 +51,7 @@ export const getScoredPlayerEntries = (masterEntry, playerEntries) => {
     return {
       playerName: entry.playerName,
       leaderboard: entry.leaderboard,
-      entry_doc: entry.entry_doc_href,
+      entry_doc: entry.entry_doc,
       score: scorePlayerEntry(masterEntry, entry)
     }
   });

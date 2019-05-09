@@ -2,11 +2,15 @@
 // TODO (Bison): add new component, Bonus.jsx
 
 import React from 'react';
+import './reset.css';
 import './App.css';
+
 
 import Leaderboard from './components/leaderboard/Leaderboard';
 
 import { ARYA, CERSEI, LEADERBOARDS } from './helpers/constants.js';
+import { masterEntries } from './components/entries/entryData';
+import { getCurrentMaster } from './helpers/scoring.js';
 
 import nightKingKiller from './images/arya-night-king-2.gif'
 import ironThroneSitter from './images/cersei-throne.gif'
@@ -17,25 +21,37 @@ function App() {
     return <Leaderboard boardName={boardName} key={indx + 1} />
   });
 
+  const getCoolDragonHeading = () => {
+    const currentMaster = getCurrentMaster(masterEntries);
+    if (currentMaster.episode === 6) {
+      // add congrats to winner
+      return `Game Over.\nThanks for playing`
+    } else {
+      return `Scores After Episode ${currentMaster.episode}`
+    }
+  }
+
   return (
     <div className="App">
-      <header className="">
-        <h1>Cool Dragon</h1>
-        <img src={coolDragon} alt="Flying dragon animation that changes colors" className="hidden"/>
+      <header className="App-header">
+        <h1 className="c--white">{getCoolDragonHeading()}</h1>
+        <article className="App-logo-container">
+          <img src={coolDragon} alt="Flying dragon animation that changes colors" className="App-logo"/>
+        </article>
       </header>
       <main>
         {leaderboardComponents}
       </main>
-      <footer>
-        <article className="w-100p">
-          <h4>Who kills the Night King?</h4>
-          <h5>{ARYA}</h5>
-          <img src={nightKingKiller} alt="Arya killing The Night King" />
+      <footer className="Bonus">
+        <article className="w--100p">
+          <h4 className="c--white">Who kills the Night King?</h4>
+          <h6 className="c--white">{ARYA}</h6>
+          <img src={nightKingKiller} alt="Arya killing The Night King" className="w--100p" />
         </article>
-        <article className="w-100p">
-          <h4>Who holds the Iron Throne at the end?</h4>
-          <h5>Currently: {CERSEI}</h5>
-          <img src={ironThroneSitter} alt="Cersei rocking the Iron Throne" />
+        <article className="w--100p">
+          <h4 className="c--white">Who holds the Iron Throne?</h4>
+          <h6 className="c--white">{CERSEI}</h6>
+          <img src={ironThroneSitter} alt="Cersei rocking the Iron Throne" className="w--100p" />
         </article>
       </footer>
     </div>
