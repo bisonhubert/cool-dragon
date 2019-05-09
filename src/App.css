@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-image: url('./images/stars.gif');
-  padding: 40px 15px;
+  padding: 25px 15px;
 }
 
 .App-logo-container {
@@ -20,9 +20,6 @@
 .Leaderboard {
   width: 90%;
   margin: 0 auto 50px;
-
-  /* REMOVE */
-  /*background-color: white;*/
 }
 
 .Leaderboard table {
