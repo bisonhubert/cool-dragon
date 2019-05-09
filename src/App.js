@@ -1,4 +1,4 @@
-// TODO (Bison): make dat dragon spinnn
+// TODO (Bison): add special winner text to getPageHeading
 // TODO (Bison): add new component, Bonus.jsx
 
 import React from 'react';
@@ -21,7 +21,7 @@ function App() {
     return <Leaderboard boardName={boardName} key={indx + 1} />
   });
 
-  const getCoolDragonHeading = () => {
+  const getPageHeading = () => {
     const currentMaster = getCurrentMaster(masterEntries);
     if (currentMaster.episode === 6) {
       // add congrats to winner
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="c--white">{getCoolDragonHeading()}</h1>
+        <h1 className="c--white">{getPageHeading()}</h1>
         <article className="App-logo-container">
           <img src={coolDragon} alt="Flying dragon animation that changes colors" className="App-logo"/>
         </article>
