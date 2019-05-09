@@ -83,7 +83,7 @@
   }
 
   .Leaderboard caption h2 {
-    padding: 15px 0;
+    margin: 15px 0;
   }
 
   .Leaderboard th {
@@ -109,5 +109,23 @@
   .Footer-img-container {
     max-width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Leaderboard {
+    margin: 0 auto 70px;
+  }
+
+  .Leaderboard caption h2 {
+    margin: 25px 0;
+  }
+
+  .Leaderboard td {
+    margin: 25px 0;
+  }
+
+  .Bonus h6 {
+    margin-bottom: 45px;
   }
 }
