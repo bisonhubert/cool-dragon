@@ -64,9 +64,17 @@ export const sortEntriesByScore = scoredEntries => {
 }
 
 export const rankEntries = sortedEntries => {
-  let rank = 1, prevIndx = 0;
+  let rank = 1, prevIndx = 0, playerTieCount = 1;
   return sortedEntries.map((entry, indx) => {
-    if (indx !== 0 && sortedEntries[prevIndx].score !== entry.score) { rank++ }
+    if (indx !== 0 && sortedEntries[prevIndx].score === entry.score) { playerTieCount++ }
+    if (indx !== 0 && sortedEntries[prevIndx].score !== entry.score) {
+      if (playerTieCount !== 1) {
+        rank += playerTieCount
+        playerTieCount = 1
+      } else {
+        rank++
+      }
+    }
     entry['rank'] = rank
     prevIndx = indx
     return entry

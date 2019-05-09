@@ -275,8 +275,8 @@ test('getEntriesForLeaderboard scores each player based on the latest episode ma
     [
       { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: 14, rank: 1 },
       { playerName: 'toadTie', leaderboard: 'homies', entry_doc: 'docToadTie', score: 14, rank: 1 },
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 2 },
-      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5, rank: 3 }
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 3 },
+      { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 5, rank: 4 }
     ]
   );
 });
