@@ -1,7 +1,6 @@
 import React from 'react';
 import Entry from '../entries/Entry.jsx';
 
-import './Leaderboard.css';
 import '../../typography.css';
 
 import { getEntriesForLeaderboard } from '../../helpers/scoring.js'

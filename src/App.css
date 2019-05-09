@@ -2,6 +2,7 @@
   text-align: center;
   /* make this slide up infinitely without moving the text up */
   background-image: url('./images/stars.gif');
+  padding: 40px 15px;
 }
 
 .App-logo {
@@ -32,4 +33,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Leaderboard {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Leaderboard h2 {
+    display: inline-block;
+    width: calc(75% - 2px);
+}
+
+.Leaderboard h6 {
+    display: inline-block;
+    width: calc(25% - 2px);
 }
