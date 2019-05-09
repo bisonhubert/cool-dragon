@@ -382,7 +382,7 @@ export const masterEntries2 = [
 export const playerEntries1 = [
   {
     playerName: 'bison',
-    entry_doc_href: 'docBison',
+    entry_doc: 'docBison',
     leaderboard: 'homies',
     alive: [ARYA, VARYS],
     dead: [GILLY, RHAEGAL],
@@ -391,7 +391,7 @@ export const playerEntries1 = [
   },
   {
     playerName: 'vanessa',
-    entry_doc_href: 'docVanessa',
+    entry_doc: 'docVanessa',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
     dead: [ARYA, VARYS],
@@ -400,7 +400,7 @@ export const playerEntries1 = [
   },
   {
     playerName: 'toad',
-    entry_doc_href: 'docToad',
+    entry_doc: 'docToad',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
     dead: [ARYA, EDD],
@@ -412,7 +412,7 @@ export const playerEntries1 = [
 export const playerEntriesTie1 = [
   {
     playerName: 'bison',
-    entry_doc_href: 'docBison',
+    entry_doc: 'docBison',
     leaderboard: 'homies',
     alive: [ARYA, VARYS],
     dead: [GILLY, RHAEGAL],
@@ -421,7 +421,7 @@ export const playerEntriesTie1 = [
   },
   {
     playerName: 'vanessa',
-    entry_doc_href: 'docVanessa',
+    entry_doc: 'docVanessa',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
     dead: [ARYA, VARYS],
@@ -430,7 +430,7 @@ export const playerEntriesTie1 = [
   },
   {
     playerName: 'toad',
-    entry_doc_href: 'docToad',
+    entry_doc: 'docToad',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
     dead: [ARYA, EDD],
@@ -439,7 +439,7 @@ export const playerEntriesTie1 = [
   },
   {
     playerName: 'toadTie',
-    entry_doc_href: 'docToadTie',
+    entry_doc: 'docToadTie',
     leaderboard: 'homies',
     alive: [GILLY, RHAEGAL],
     dead: [ARYA, EDD],
