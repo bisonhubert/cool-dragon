@@ -17,15 +17,15 @@ import ironThroneSitter from './images/cersei-throne.gif'
 import coolDragon from './images/cool-dragon-2.gif'
 
 function App() {
+  const currentMaster = getCurrentMaster(masterEntries);
+
   const leaderboardComponents = LEADERBOARDS.map((boardName, indx) => {
-    return <Leaderboard boardName={boardName} key={indx + 1} />
+    return <Leaderboard boardName={boardName} key={indx + 1} episodeNum={currentMaster.episode}/>
   });
 
-  const getPageHeading = () => {
-    const currentMaster = getCurrentMaster(masterEntries);
-    if (currentMaster.episode === 6) {
-      // add congrats to winner
-      return `Game Over.\nThanks for playing`
+  const getPageHeading = (episodeNum) => {
+    if (episodeNum === 6) {
+      return `GAME OVER`
     } else {
       return `Scores After Episode ${currentMaster.episode}`
     }
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="c--white">{getPageHeading()}</h1>
+        <h1 className="c--white">{getPageHeading(currentMaster.episode)}</h1>
         <article className="App-logo-container">
           <img src={coolDragon} alt="Flying dragon animation that changes colors" className="App-logo"/>
         </article>

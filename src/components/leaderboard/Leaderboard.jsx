@@ -3,7 +3,7 @@ import Entry from '../entries/Entry.jsx';
 
 import '../../typography.css';
 
-import { getEntriesForLeaderboard } from '../../helpers/scoring.js'
+import { getEntriesForLeaderboard, getFinalLeaderboardString } from '../../helpers/scoring.js'
 import { masterEntries, playerEntries } from '../entries/entryData';
 import { PRICE_PER_ENTRY } from '../../helpers/constants.js';
 
@@ -14,19 +14,38 @@ function Leaderboard(props) {
     return entry.leaderboard.toLowerCase() === props.boardName.toLowerCase()
   });
 
-  const sortedEntries = getEntriesForLeaderboard(masterEntries, entries)
+  const leaderboardEntries = getEntriesForLeaderboard(masterEntries, entries)
+  const leaderboardPot = calculatePot(leaderboardEntries.length, PRICE_PER_ENTRY);
 
-  const entryComponents = sortedEntries.map((entry, indx) => {
-    return <Entry key={indx + 1} entry={entry} />
+  const entryComponents = leaderboardEntries.map((entry, indx) => {
+    return <Entry key={indx + 1} entry={entry} episodeNum={props.episodeNum} />
   });
+
+  const getLeaderboardHeading = (leaderboardEntries, leaderboardPot) => {
+    if (props.episodeNum === 6) {
+      return getFinalLeaderboardString(props.boardName, leaderboardEntries, leaderboardPot);
+    } else {
+      return `${props.boardName} Leaderboard`
+    }
+  }
+
+  const getLeaderboardPotDiv = () => {
+    if (props.episodeNum !== 6) {
+      return <h3 className="c--white">Pot: ${leaderboardPot}</h3>
+    }
+  }
+
+  const getEndgameAttr = () => {
+    if (props.episodeNum === 6) { return 'endgame' }
+  }
 
   return (
     <div className="Leaderboard">
       <article>
         <table>
-          <caption>
-            <h2 className="c--white">{props.boardName} Leaderboard</h2>
-            <h3 className="c--white">Pot: ${calculatePot(sortedEntries.length, PRICE_PER_ENTRY)}</h3>
+          <caption className={getEndgameAttr()}>
+            <h2 className="c--white">{getLeaderboardHeading(leaderboardEntries, leaderboardPot)}</h2>
+            {getLeaderboardPotDiv()}
           </caption>
           <thead>
             <tr>
