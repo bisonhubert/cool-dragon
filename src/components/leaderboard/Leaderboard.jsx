@@ -18,7 +18,7 @@ function Leaderboard(props) {
   const leaderboardPot = calculatePot(leaderboardEntries.length, PRICE_PER_ENTRY);
 
   const entryComponents = leaderboardEntries.map((entry, indx) => {
-    return <Entry key={indx + 1} entry={entry} />
+    return <Entry key={indx + 1} entry={entry} episodeNum={props.episodeNum} />
   });
 
   const getLeaderboardHeading = (leaderboardEntries, leaderboardPot) => {
