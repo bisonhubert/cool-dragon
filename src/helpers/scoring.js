@@ -87,3 +87,35 @@ export const getEntriesForLeaderboard = (masterEntries, playerEntries) => {
         sortedEntries = sortEntriesByScore(scoredEntries);
         return rankEntries(sortedEntries);
 }
+
+const getWinnersOfLeaderboard = rankedEntries => {
+  return rankedEntries.filter(entry => {
+    return entry.rank === 1
+  });
+}
+
+const getWinnersStr = rankedEntries => {
+  let winnersStr;
+  const winners = getWinnersOfLeaderboard(rankedEntries),
+        capitalizePlayerName = str => str.charAt(0).toUpperCase() + str.slice(1);
+  winners.forEach((winner, indx) => {
+    if (indx > 0) {
+      winnersStr += ` & ${capitalizePlayerName(winner.playerName)}`
+    } else {
+      winnersStr = capitalizePlayerName(winner.playerName)
+    }
+  });
+  return winnersStr;
+}
+
+const computeWinnerPayout = (winnerStr, leaderboardPot) => {
+  const winnerCount = winnerStr.split('&').length;
+  if (winnerCount > 1) { return `$${leaderboardPot / winnerCount}` }
+  return `$${leaderboardPot}`;
+}
+
+export const getFinalLeaderboardString = (boardName, rankedEntries, leaderboardPot) => {
+  const winnerStr = getWinnersStr(rankedEntries),
+        winnerPayout = computeWinnerPayout(winnerStr, leaderboardPot);
+  return `Congratulations ${winnerStr}! You just won ${winnerPayout}!!`;
+}
