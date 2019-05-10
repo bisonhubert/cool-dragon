@@ -35,11 +35,15 @@ function Leaderboard(props) {
     }
   }
 
+  const getEndgameAttr = () => {
+    if (props.episodeNum === 6) { return 'endgame' }
+  }
+
   return (
     <div className="Leaderboard">
       <article>
         <table>
-          <caption>
+          <caption className={getEndgameAttr()}>
             <h2 className="c--white">{getLeaderboardHeading(leaderboardEntries, leaderboardPot)}</h2>
             {getLeaderboardPotDiv()}
           </caption>

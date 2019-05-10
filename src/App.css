@@ -29,11 +29,19 @@
 
 .Leaderboard caption h2 {
   margin: 8px 0;
-  line-height: 1.5;
 }
 
 .Leaderboard caption h3 {
   margin: 15px 0;
+}
+
+.Leaderboard .endgame {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.Leaderboard .endgame h2 {
+  line-height: 2;
 }
 
 .Leaderboard th,
@@ -79,6 +87,12 @@
   }
 }
 
+@media screen and (min-width: 500px) {
+  .Leaderboard .endgame {
+    width: 375px;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .App {
     padding: 45px 30px;
@@ -86,6 +100,10 @@
 
   .App-logo-container {
     width: 300px;
+  }
+
+  .Leaderboard .endgame {
+    width: 480px;
   }
 
   .App-header h1 {
@@ -122,6 +140,12 @@
   }
 }
 
+@media screen and (min-width: 779px) {
+  .Leaderboard .endgame {
+    width: 645px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .App-header h1 {
     width: auto;
@@ -129,6 +153,10 @@
 
   .Leaderboard {
     margin: 0 auto 70px;
+  }
+
+  .Leaderboard .endgame {
+    width: 800px;
   }
 
   .Leaderboard caption h2 {
