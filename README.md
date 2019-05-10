@@ -1,9 +1,15 @@
 # Game of Thrones Deadpool Leaderboard
 
+## About
+
+Cool Dragon is a retro-inspired leaderboard and an automated scoring program for an in-office Game of Thrones Deadpool game. An ouline on how to play lives [here](https://docs.google.com/document/d/1tGUmgt2rweh8s5ZZ_C7CvPB2R6t8R6Licc002579kJk/edit).
+
+![Screenshot of the landing of Cool Dragon, with the title, dragon icon, and first player rank](https://github.com/bisonhubert/cool-dragon/blob/master/src/images/cool-dragon-screenshot.png)
+
 ## Technologies
 
 1. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-2. Deployed to Heroku with [Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration)
+2. Deployed on a free Heroku dyno with [Zero Configuration](https://blog.heroku.com/deploying-react-with-zero-configuration)
 
 ## Local Setup
 
@@ -11,6 +17,10 @@
 2. `npm i`
 3. `npm start`
 
+## Testing
+
+Testing was built for the scoring and ranking system. Can be run with `npm test`.
+
 ## Author
 
-* Bison Hubert © 2019
+* Bison Hubert, 2019
