@@ -11,7 +11,7 @@ function Entry(props) {
         <td><h5 className="c--green">{props.entry.score}</h5></td>
         <td><a href={props.entry.entry_doc}
              target="_blank"
-             rel="noopener noreferrer"><h5 className="link__c--pink">📝</h5>
+             rel="noopener noreferrer"><h5 className="link__c--pink"><span role="img" aria-label="paper and pencil">📝</span></h5>
         </a></td>
       </tr>
     </tbody>
