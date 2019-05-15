@@ -29,8 +29,10 @@ export const scorePlusTwoMinusOneVariant = (masterEntry, playerEntry) => {
 
 export const scoreBonusQuestions = (masterEntry, playerEntry) => {
   let score = 0;
-  for (let i = 0; i <= masterEntry.bonuses.length; i++) {
-    if (masterEntry.bonuses[i] && playerEntry.bonuses[i]) {
+  for (let i = 0; i < masterEntry.bonuses.length; i++) {
+    if (masterEntry.bonuses[i] === undefined && playerEntry.bonuses[i] === undefined) {
+      score += 5
+    } else if (masterEntry.bonuses[i] !== undefined && playerEntry.bonuses[i] !== undefined) {
       if (masterEntry.bonuses[i].toLowerCase() === playerEntry.bonuses[i].toLowerCase()) {
         score += 5
       }
