@@ -8,12 +8,11 @@ import './App.css';
 
 import Leaderboard from './components/leaderboard/Leaderboard';
 
-import { ARYA, CERSEI, LEADERBOARDS } from './helpers/constants.js';
+import { ARYA, LEADERBOARDS } from './helpers/constants.js';
 import { masterEntries } from './components/entries/entryData';
 import { getCurrentMaster } from './helpers/scoring.js';
 
 import nightKingKiller from './images/arya-night-king-2.gif'
-import ironThroneSitter from './images/cersei-throne.gif'
 import coolDragon from './images/cool-dragon-2.gif'
 
 function App() {
