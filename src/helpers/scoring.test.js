@@ -172,15 +172,12 @@ test('scorePlusTwoMinusOneVariant subtracts 1 point for an incorrect white walke
 })
 
 test('scoreBonusQuestions scores 0 points if bonus questions are not answered correctly', () => {
-  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.noBonusAnswered)).toBe(0);
-  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.firstBonusAnswered)).toBe(0);
-  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.secondBonusAnswered)).toBe(0);
-  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.bothBonusSame)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.bothBonusArya)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.bonus1AryaBonus2Pod)).toBe(0);
+  expect(scoring.scoreBonusQuestions(fixtures.secondBonusArya, fixtures.bonus1AryaBonus2Pod)).toBe(0);
 })
 
 test('scoreBonusQuestions scores 5 points if one bonus question is answered correctly', () => {
-  expect(scoring.scoreBonusQuestions(fixtures.firstBonusArya, fixtures.firstBonusArya)).toBe(5);
-  expect(scoring.scoreBonusQuestions(fixtures.secondBonusArya, fixtures.secondBonusArya)).toBe(5);
   expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.firstBonusArya)).toBe(5);
   expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.secondBonusArya)).toBe(5);
   expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.bonus1AryaBonus2Pod)).toBe(5);
@@ -188,6 +185,7 @@ test('scoreBonusQuestions scores 5 points if one bonus question is answered corr
 })
 
 test('scoreBonusQuestions scores 10 points if both bonus questions are answered correctly', () => {
+  expect(scoring.scoreBonusQuestions(fixtures.noBonusAnswered, fixtures.noBonusAnswered)).toBe(10);
   expect(scoring.scoreBonusQuestions(fixtures.bothBonusArya, fixtures.bothBonusArya)).toBe(10);
   expect(scoring.scoreBonusQuestions(fixtures.bonus1AryaBonus2Pod, fixtures.bonus1AryaBonus2Pod)).toBe(10);
 })
@@ -207,7 +205,7 @@ test('scorePlayerEntry correctly scores a single entry', () => {
 test('getScoredPlayerEntries should return modeled entry object', () => {
   expect(scoring.getScoredPlayerEntries(fixtures.masterEntries1[0], fixtures.playerEntries1)).toEqual(
     [
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6 },
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 11 },
       { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2 },
       { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3 }
     ]
@@ -253,7 +251,7 @@ test('sortEntriesByScore sorts tied entries by name in descending order', () => 
 test('getEntriesForLeaderboard scores each player based on the episode master', () => {
   expect(scoring.getEntriesForLeaderboard(fixtures.masterEntries1, fixtures.playerEntries1)).toEqual(
     [
-      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 6, rank: 1 },
+      { playerName: 'bison', leaderboard: 'homies', entry_doc: 'docBison', score: 11, rank: 1 },
       { playerName: 'vanessa', leaderboard: 'homies', entry_doc: 'docVanessa', score: 2, rank: 2 },
       { playerName: 'toad', leaderboard: 'homies', entry_doc: 'docToad', score: -3, rank: 3 }
     ]

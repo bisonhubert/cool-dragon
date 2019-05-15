@@ -13,7 +13,6 @@ import { masterEntries } from './components/entries/entryData';
 import { getCurrentMaster } from './helpers/scoring.js';
 
 import nightKingKiller from './images/arya-night-king-2.gif'
-import ironThroneSitter from './images/cersei-hrone.gif'
 import coolDragon from './images/cool-dragon-2.gif'
 
 function App() {
