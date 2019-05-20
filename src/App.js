@@ -51,7 +51,7 @@ function App() {
         </article>
         <article className="w--100p">
           <h4 className="c--white">Who holds the Iron Throne?</h4>
-          <h6 className="c--white">The Iron Throne has been destroyed (as far as we know)</h6>
+          <h6 className="c--white">The Iron Throne was destroyed by Drogon </h6>
         </article>
       </footer>
     </div>
